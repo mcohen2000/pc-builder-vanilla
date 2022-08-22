@@ -1,0 +1,19 @@
+/* .dropdown-menu{
+    display: flex;
+    flex-direction: row;
+} */
+.dropdown-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#content-wrapper{
+    display: flex;
+    /* center horizontal */
+    justify-content: center;
+    /* top of flex */
+    align-items: flex-start;
+    height: 75vh;
+    width: 100%;
+}

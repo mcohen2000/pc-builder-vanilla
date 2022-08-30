@@ -1,0 +1,43 @@
+#content-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100%;
+    /* text-align: center; */
+}
+#content-wrapper h2{
+    margin-top: 3rem;
+    align-self: center;
+    text-align: center;
+}
+#products-wrapper{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    background: rgb(70, 128, 162);
+    border: 2px solid rgb(86, 159, 201);
+    border-radius: 50px;
+    width: 85%;
+    left: 7.5%;
+    right: 25%;
+    bottom: 50%;
+}
+#products-wrapper h4 {
+    margin-left: 2rem;
+    /* padding-right: 80%; */
+}
+#products-wrapper button{
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-right: 2rem;
+    border: 1px solid white;
+    background: transparent;
+    width: 30px;
+}
+table{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}

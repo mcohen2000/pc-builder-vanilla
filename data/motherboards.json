@@ -1,57 +1,27 @@
 {
-    "CPU":{
-        "AMD":{
-            "AM4":{
-                "5800X":{
-                    "price":449.99,
-                    "cores":8
-                },
-                "5900X":{
-                    "price":549.99,
-                    "cores":12
-                },
-                "5950X":{
-                    "price":799.99,
-                    "cores":16
-                }
-            }
-        },
-        "INTEL":{
-            "LGA1700":{
-                "12600K":{
-                    "price":319.99,
-                    "cores":10
-                },
-                "12700K":{
-                    "price":449.99,
-                    "cores":12
-                },
-                "12900K":{
-                    "price":649.99,
-                    "cores":16
-                }
-            }
-        }
-
-    },
-    "Motherboards":{
         "AMD":{
             "AM4":{
                 "X570":{
                     "ASUS":{
                         "PRIME":{
+                            "manufacturer":"ASUS",
+                            "name":"Prime",
                             "price":259.99,
                             "Memory-Total-Max":"128GB",
                             "Memory-Slot-Max":"32GB",
                             "Memory-Type":"DDR4"
                         },
                         "TUF":{
+                            "manufacturer":"ASUS",
+                            "name":"TUF",
                             "price":209.99,
                             "Memory-Total-Max":"128GB",
                             "Memory-Slot-Max":"32GB",
                             "Memory-Type":"DDR4"
                         },
                         "ROG":{
+                            "manufacturer":"ASUS",
+                            "name":"ROG",
                             "price":349.99,
                             "Memory-Total-Max":"128GB",
                             "Memory-Slot-Max":"32GB",
@@ -60,18 +30,24 @@
                     },
                     "MSI":{
                         "MPG":{
+                            "manufacturer":"MSI",
+                            "name":"MPG",
                             "price":159.99,
                             "Memory-Total-Max":"128GB",
                             "Memory-Slot-Max":"32GB",
                             "Memory-Type":"DDR4" 
                         },
                         "MAG":{
+                            "manufacturer":"MSI",
+                            "name":"MAG",
                             "price":229.99,
                             "Memory-Total-Max":"128GB",
                             "Memory-Slot-Max":"32GB",
                             "Memory-Type":"DDR4"
                         },
                         "MEG":{
+                            "manufacturer":"MSI",
+                            "name":"MEG",
                             "price":329.99,
                             "Memory-Total-Max":"128GB",
                             "Memory-Slot-Max":"32GB",
@@ -128,6 +104,5 @@
                 }
             }
         }
-    }
 
 }

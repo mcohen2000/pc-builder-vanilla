@@ -1,0 +1,51 @@
+{
+    "title":"CPU",
+    "5600X":{
+        "manufacturer":"AMD",
+        "socket":"AM4",
+        "name":"Ryzen 5 5600X",
+        "model":"5600X",
+        "price":299.99,
+        "cores":8
+    },
+    "5800X":{
+        "manufacturer":"AMD",
+        "socket":"AM4",
+        "name":"Ryzen 7 5800X",
+        "model":"5800X",
+        "price":449.99,
+        "cores":12
+    },
+    "5900X":{
+        "manufacturer":"AMD",
+        "socket":"AM4",
+        "name":"Ryzen 9 5950X",
+        "model":"5950X",
+        "price":799.99,
+        "cores":16
+    },
+    "12600K":{
+        "manufacturer":"INTEL",
+        "socket":"LGA1700",
+        "name":"Core i5 12600K",
+        "model":"12600K",
+        "price":319.99,
+        "cores":10
+    },
+    "12700K":{
+        "manufacturer":"INTEL",
+        "socket":"LGA1700",
+        "name":"Core i7 12700K",
+        "model":"12700K",
+        "price":449.99,
+        "cores":12
+    },
+    "12900K":{
+        "manufacturer":"INTEL",
+        "socket":"LGA1700",
+        "name":"Core i9 12900K",
+        "model":"12900K",
+        "price":649.99,
+        "cores":16
+    }
+}

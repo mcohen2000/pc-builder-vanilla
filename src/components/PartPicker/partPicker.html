@@ -52,27 +52,33 @@
         <h2>Part Picker</h2>
         <div id="picker-wrapper">
           <table>
-            <tr><th>Components</th><th></th><th>Selection</th><th>Price</th></tr>
+            <tr><th>Components</th><th></th><th>Selection</th><th class="table-head-price" >Price</th></tr>
 
             <tr><td>CPU</td>
               <td></td>
               <td><div id="cpu-selection"><button class="addItemButton" id="picker-cpu">+ Choose A CPU</button></div></td>
-              <td>$0.00</td>
+              <td class="table-price" id="cpu-price">$0.00</td>
             </tr>
             <tr><td>CPU Cooler</td>
               <td></td>
               <td><div id="cpu-cooler-selection"><button class="addItemButton" id="picker-cpu-cooler">+ Choose A CPU Cooler</button></div></td>
-              <td>$0.00</td>
+              <td class="table-price" id="cpu-cooler-price">$0.00</td>
             </tr>
             <tr><td>Motherboard</td>
               <td></td>
               <td><div id="motherboard-selection"><button class="addItemButton" id="picker-motherboard">+ Choose A Motherboard</button></div></td>
-              <td>$0.00</td>
+              <td class="table-price" id="motherboard-price">$0.00</td>
             </tr>
             <tr><td>Video Card</td>
               <td></td>
               <td><div id="gpu-selection"><button class="addItemButton" id="picker-gpu">+ Choose A Video Card</button></div></td>
-              <td>$0.00</td>
+              <td class="table-price" id="gpu-price">$0.00</td>
+            </tr>
+            <tr></tr>
+            <tr><td><h3>Total</h3></td>
+              <td></td>
+              <td></td>
+              <td class="table-total-price"><h3 id="total-price">$0.00</h3></td>
             </tr>
           </table>
         </div>

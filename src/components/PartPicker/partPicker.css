@@ -91,3 +91,12 @@
 table{
     width: 100%;
 }
+.table-price{
+    text-align: end;
+}
+.table-head-price{
+    text-align: end;
+}
+.table-total-price{
+    text-align: end;
+}

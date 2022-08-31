@@ -24,15 +24,42 @@ function makeCard(data) {
   productsList.id = "products-list";
   // load options and append to newCard
   for (let i = 0; i < data.products.length; i++) {
-    console.log(data.products[i]);
+    // console.log(data.products[i]);
     const productWrapper = document.createElement("div");
     productWrapper.classList += "product";
     const productTitle = document.createElement("p");
-    productTitle.innerText = `${data.products[i].manufacturer} ${data.products[i].name}`;
+    if (data.title == "CPU"){
+      productTitle.innerText = `${data.products[i].manufacturer} ${data.products[i].name}`;
+    }
+    if (data.title == "Motherboard"){
+      productTitle.innerText = `${data.products[i].manufacturer} ${data.products[i].series} ${data.products[i].name} ${data.products[i].socket}`;
+    }
     productWrapper.append(productTitle);
     productWrapper.addEventListener("click", () => {
-      const selectionWrapper = document.getElementById(`${data.title.toLowerCase()}-selection`);
-      selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name}`;
+      //set selection on list
+      const selectionWrapper = document.getElementById(`picker-${data.title.toLowerCase()}`);
+      if (data.title == "CPU"){
+        selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name}`;
+      }
+      if (data.title == "Motherboard"){
+        selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].series} ${data.products[i].name} ${data.products[i].socket}`;
+      }
+      //set price on list
+      const priceWrapper = document.getElementById(`${data.title.toLowerCase()}-price`);
+      priceWrapper.innerText = `$${data.products[i].price}`;
+
+      function updatePriceTotal(){
+        const totalPriceEl = document.getElementById("total-price");
+        let totalPrice = 0;
+        let prices = document.getElementsByClassName("table-price");
+        for (let i=0; i<prices.length; i++){
+          console.log(prices[i].innerText.slice(1));
+          totalPrice += parseFloat(prices[i].innerText.slice(1));
+
+        }
+        totalPriceEl.innerText = `$${totalPrice.toFixed(2)}`;
+      }
+      updatePriceTotal()
     })
     productsList.append(productWrapper);
   }

@@ -4,8 +4,11 @@ import motherboardData from "../../../data/motherboards.json" assert { type: "js
 const contentWrapper = document.getElementById("content-wrapper");
 
 function makeCard(data) {
+  //make card
   const newCard = document.createElement("div");
   newCard.id = "products-wrapper";
+  const cardHeader = document.createElement("div");
+  cardHeader.id = "products-header";
   const cardTitle = document.createElement("h4");
   cardTitle.innerText = data.title;
   const closeButton = document.createElement("button");
@@ -13,10 +16,27 @@ function makeCard(data) {
   closeButton.addEventListener("click", () => {
     newCard.outerHTML = "";
   });
-  newCard.append(cardTitle);
-  newCard.append(closeButton);
-
+  cardHeader.append(cardTitle);
+  cardHeader.append(closeButton);
+  newCard.append(cardHeader);
+  
+  const productsList = document.createElement("div");
+  productsList.id = "products-list";
   // load options and append to newCard
+  for (let i = 0; i < data.products.length; i++) {
+    console.log(data.products[i]);
+    const productWrapper = document.createElement("div");
+    productWrapper.classList += "product";
+    const productTitle = document.createElement("p");
+    productTitle.innerText = `${data.products[i].manufacturer} ${data.products[i].name}`;
+    productWrapper.append(productTitle);
+    productWrapper.addEventListener("click", () => {
+      const selectionWrapper = document.getElementById(`${data.title.toLowerCase()}-selection`);
+      selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name}`;
+    })
+    productsList.append(productWrapper);
+  }
+  newCard.append(productsList);
 
   contentWrapper.append(newCard);
   console.log("JSON:", data);

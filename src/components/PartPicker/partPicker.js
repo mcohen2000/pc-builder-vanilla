@@ -1,6 +1,8 @@
 console.log("JAVASCRIPT LOADED!!!");
 import cpuData from "../../../data/cpu.json" assert { type: "json" };
+import gpuData from "../../../data/gpu.json" assert { type: "json" };
 import motherboardData from "../../../data/motherboards.json" assert { type: "json" };
+import cpuCoolerData from "../../../data/cpu-cooler.json" assert { type: "json" };
 const contentWrapper = document.getElementById("content-wrapper");
 
 function makeCard(data) {
@@ -19,7 +21,7 @@ function makeCard(data) {
   cardHeader.append(cardTitle);
   cardHeader.append(closeButton);
   newCard.append(cardHeader);
-  
+
   const productsList = document.createElement("div");
   productsList.id = "products-list";
   // load options and append to newCard
@@ -28,39 +30,58 @@ function makeCard(data) {
     const productWrapper = document.createElement("div");
     productWrapper.classList += "product";
     const productTitle = document.createElement("p");
-    if (data.title == "CPU"){
+    if (data.title == "CPU") {
       productTitle.innerText = `${data.products[i].manufacturer} ${data.products[i].name}`;
     }
-    if (data.title == "Motherboard"){
+    if (data.title == "CPU Cooler") {
+      productTitle.innerText = `${data.products[i].manufacturer} ${data.products[i].name}`;
+    }
+    if (data.title == "Motherboard") {
       productTitle.innerText = `${data.products[i].manufacturer} ${data.products[i].series} ${data.products[i].name} ${data.products[i].socket}`;
+    }
+    if (data.title == "GPU") {
+      productTitle.innerText = `${data.products[i].manufacturer} ${data.products[i].chipset} ${data.products[i].memory} ${data.products[i].name}`;
     }
     productWrapper.append(productTitle);
     productWrapper.addEventListener("click", () => {
       //set selection on list
-      const selectionWrapper = document.getElementById(`picker-${data.title.toLowerCase()}`);
-      if (data.title == "CPU"){
+      let selectionWrapper = document.getElementById(
+        `picker-${data.title.toLowerCase()}`
+      );
+      if (data.title == "CPU") {
         selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name}`;
       }
-      if (data.title == "Motherboard"){
+      if (data.title == "GPU") {
+        selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].chipset} ${data.products[i].memory} ${data.products[i].name}`;
+      }
+      if (data.title == "CPU Cooler") {
+        selectionWrapper = document.getElementById("picker-cpu-cooler");
+        selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name}`;
+      }
+      if (data.title == "Motherboard") {
         selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].series} ${data.products[i].name} ${data.products[i].socket}`;
       }
       //set price on list
-      const priceWrapper = document.getElementById(`${data.title.toLowerCase()}-price`);
+      let priceWrapper = document.getElementById(
+        `${data.title.toLowerCase()}-price`
+      );
+      if (data.title == "CPU Cooler") {
+        priceWrapper = document.getElementById(`cpu-cooler-price`);
+      }
       priceWrapper.innerText = `$${data.products[i].price}`;
 
-      function updatePriceTotal(){
+      function updatePriceTotal() {
         const totalPriceEl = document.getElementById("total-price");
         let totalPrice = 0;
         let prices = document.getElementsByClassName("table-price");
-        for (let i=0; i<prices.length; i++){
+        for (let i = 0; i < prices.length; i++) {
           console.log(prices[i].innerText.slice(1));
           totalPrice += parseFloat(prices[i].innerText.slice(1));
-
         }
         totalPriceEl.innerText = `$${totalPrice.toFixed(2)}`;
       }
-      updatePriceTotal()
-    })
+      updatePriceTotal();
+    });
     productsList.append(productWrapper);
   }
   newCard.append(productsList);
@@ -87,6 +108,7 @@ cpuCoolerButton.addEventListener("click", () => {
   if (document.getElementById("products-wrapper")) {
     document.getElementById("products-wrapper").outerHTML = "";
   }
+  makeCard(cpuCoolerData);
 });
 
 const motherboardButton = document.getElementById("picker-motherboard");
@@ -95,4 +117,12 @@ motherboardButton.addEventListener("click", () => {
     document.getElementById("products-wrapper").outerHTML = "";
   }
   makeCard(motherboardData);
+});
+
+const gpuButton = document.getElementById("picker-gpu");
+gpuButton.addEventListener("click", () => {
+  if (document.getElementById("products-wrapper")) {
+    document.getElementById("products-wrapper").outerHTML = "";
+  }
+  makeCard(gpuData);
 });

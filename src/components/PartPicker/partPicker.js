@@ -81,6 +81,10 @@ function makeCard(data) {
         priceWrapper = document.getElementById(`cpu-cooler-price`);
       }
       priceWrapper.innerText = `$${data.products[i].price}`;
+      // remove list of products after user selects an option
+      if (document.getElementById("products-wrapper")) {
+        document.getElementById("products-wrapper").outerHTML = "";
+      }
 
       function updatePriceTotal() {
         const totalPriceEl = document.getElementById("total-price");

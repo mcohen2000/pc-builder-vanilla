@@ -38,6 +38,9 @@ function makeCard(data) {
     const productWrapper = document.createElement("div");
     productWrapper.classList += "product";
     const productTitle = document.createElement("p");
+    const productPrice = document.createElement("p");
+    productPrice.classList += "productPrice";
+    productPrice.innerText = `$${data.products[i].price}`;
     if (data.title == "CPU") {
       productTitle.innerText = `${data.products[i].manufacturer} ${data.products[i].name}`;
     }
@@ -51,6 +54,7 @@ function makeCard(data) {
       productTitle.innerText = `${data.products[i].manufacturer} ${data.products[i].chipset} ${data.products[i].memory} ${data.products[i].name}`;
     }
     productWrapper.append(productTitle);
+    productWrapper.append(productPrice);
     productWrapper.addEventListener("click", () => {
       //set selection on list
       let selectionWrapper = document.getElementById(

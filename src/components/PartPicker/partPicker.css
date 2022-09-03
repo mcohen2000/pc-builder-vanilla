@@ -76,6 +76,7 @@ body{
 }
 .product{
     display: flex;
+    flex-direction: column;
     color: white;
     border: 1px solid rgb(149, 149, 149);
     margin: .5rem;
@@ -92,6 +93,14 @@ body{
     padding-left: 1rem;
     padding-right: 1rem;
     transition: all .25s;
+}
+.productPrice{
+    font-weight: 700;
+    text-shadow: 0 0 2px rgb(255, 21, 21), 0 0 1px white;
+    color: rgb(255, 0, 0);
+    align-self: flex-end;
+    margin: 1rem;
+    margin-top: 0rem;
 }
 button{
     z-index: 11;

@@ -26,9 +26,15 @@ body{
 }
 #products-wrapper{
     display: flex;
+    position: absolute;
+    top: 7rem;
+    left: 2rem;
+    right: 2rem;
     flex-direction: column;
     margin-top: 1rem;
-    background: rgba(0, 0, 0, 0.624)
+    background: rgba(61, 46, 46, 0.98);
+    border: 1px solid white;
+    border-radius: 12px;
 }
 #products-header{
     display: flex;
@@ -37,7 +43,7 @@ body{
 #products-list{
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-around; */
+    justify-content: space-around;
     border-radius: 10px;
   
     
@@ -101,6 +107,10 @@ body{
     align-self: flex-end;
     margin: 1rem;
     margin-top: 0rem;
+}
+.part-selection{
+    border-bottom: 1px solid white;
+    margin-bottom: 1rem;
 }
 button{
     z-index: 11;

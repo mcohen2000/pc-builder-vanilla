@@ -1,19 +1,23 @@
+body{
+    min-height: 100vh;
+    -webkit-tap-highlight-color: transparent;
+    background: linear-gradient(0deg, rgb(255, 238, 0) 0%, rgb(255, 119, 0) 30%, rgb(255, 0, 0) 100%);
+}
 #content-wrapper{
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
+    color: white;
     width: 100%;
+    height: 100%;
     padding: 2rem;
+    /* z-index: 1; */
     /* margin-left: 2rem; */
     /* text-align: center; */
 }
-.navbar-toggler{
-    background-color: rgb(0, 145, 255);
-}
-.navbar-toggler:hover{
-    background-color: rgb(114, 192, 255);
-    transition: all .25s;
+.addItemButton{
+    padding: 1rem;
 }
 #content-wrapper h2{
     margin-top: 3rem;
@@ -24,7 +28,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
-    background: rgb(246, 79, 100);
+    background: rgba(0, 0, 0, 0.624)
 }
 #products-header{
     display: flex;
@@ -40,7 +44,7 @@
     
 }
 #products-header h4 {
-    color: black;
+    color: white;
     padding-top: .75rem;
     margin-left: .75rem;
     /* padding-right: 80%; */
@@ -48,7 +52,7 @@
 #products-header button{
     display: flex;
     justify-content: center;
-    color: rgb(252, 128, 145);
+    color: white;
     margin-top: .25rem;
     margin-right: .25rem;
     border-radius: 50px;
@@ -61,18 +65,19 @@
 #products-header button:hover{
     display: flex;
     justify-content: center;
-    color: rgb(246, 79, 100);
+    color: black;
     margin-top: .25rem;
     margin-right: .25rem;
     border-radius: 50px;
-    background: rgb(252, 128, 145);
+    background: white;
     height: 30px;
     width: 30px;
     transition: all .25s;
 }
 .product{
     display: flex;
-    border: 1px solid black;
+    color: white;
+    border: 1px solid rgb(149, 149, 149);
     margin: .5rem;
     padding: .5rem;
     width: 12rem;
@@ -81,22 +86,19 @@
     text-align: center;
 }
 .product:hover{
-    border: 1px solid rgb(255, 255, 255);
-    color: white;
+    border: 1px solid red;
+    color: red;
     cursor: pointer;
     padding-left: 1rem;
     padding-right: 1rem;
     transition: all .25s;
 }
-table{
-    width: 100%;
+button{
+    z-index: 11;
 }
-.table-price{
+.component-price{
     text-align: end;
 }
-.table-head-price{
-    text-align: end;
-}
-.table-total-price{
+#total-price{
     text-align: end;
 }

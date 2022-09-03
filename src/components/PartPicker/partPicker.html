@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="partPicker.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">PC Builder</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,6 +51,30 @@
       <div id="content-wrapper">
         <h2>Part Picker</h2>
         <div id="picker-wrapper">
+          <div id="cpu-selection" >
+              <h4>CPU</h4>
+              <button type="button" class="addItemButton button" id="picker-cpu">+ Choose A CPU</button>
+              <p class="component-price" id="cpu-price">$0.00</p>
+            </div>
+            <div id="cpu-cooler-selection">
+              <h4>CPU Cooler</h4>
+              <button type="button" class="addItemButton button" id="picker-cpu-cooler">+ Choose A CPU Cooler</button>
+              <p class="component-price" id="cpu-cooler-price">$0.00</p>
+            </div>
+            <div id="motherboard-selection">
+              <h4>Motherboard</h4>
+              <button type="button" class="addItemButton button" id="picker-motherboard">+ Choose A Motherboard</button>
+              <p class="component-price" id="motherboard-price">$0.00</p>
+            </div>
+            <div id="gpu-selection">
+              <h4>Video Card</h4>
+              <button type="button" class="addItemButton" id="picker-gpu">+ Choose A Video Card</button>
+              <p class="component-price" id="gpu-price">$0.00</p>
+            </div>
+            <h3>Total</h3>
+            <p class="table-total-price" id="total-price">$0.00</p>
+        </div>
+        <!-- <div id="picker-wrapper">
           <table>
             <tr><th>Components</th><th></th><th>Selection</th><th class="table-head-price" >Price</th></tr>
 
@@ -81,9 +105,9 @@
               <td class="table-total-price"><h3 id="total-price">$0.00</h3></td>
             </tr>
           </table>
-        </div>
+        </div> -->
       </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script type="module" src="./partPicker.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+      <script type="module" src="./partPicker.js"></script>
 </body>
 </html>

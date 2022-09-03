@@ -1,11 +1,19 @@
 console.log("JAVASCRIPT LOADED!!!");
-import cpuData from "../../../data/cpu.json" assert { type: "json" };
-import gpuData from "../../../data/gpu.json" assert { type: "json" };
-import motherboardData from "../../../data/motherboards.json" assert { type: "json" };
-import cpuCoolerData from "../../../data/cpu-cooler.json" assert { type: "json" };
+
+const getData = async (id) => {
+  const res = await fetch(`../../../data/${id}.json`);
+  const data = await res.json();
+  console.log("INSIDE ASYNC GET DATA", data);
+  return data
+};
+
 const contentWrapper = document.getElementById("content-wrapper");
 
 function makeCard(data) {
+  // check for previous card and clear for new card
+  if (document.getElementById("products-wrapper")) {
+    document.getElementById("products-wrapper").outerHTML = "";
+  }
   //make card
   const newCard = document.createElement("div");
   newCard.id = "products-wrapper";
@@ -73,7 +81,7 @@ function makeCard(data) {
       function updatePriceTotal() {
         const totalPriceEl = document.getElementById("total-price");
         let totalPrice = 0;
-        let prices = document.getElementsByClassName("table-price");
+        let prices = document.getElementsByClassName("component-price");
         for (let i = 0; i < prices.length; i++) {
           console.log(prices[i].innerText.slice(1));
           totalPrice += parseFloat(prices[i].innerText.slice(1));
@@ -85,44 +93,36 @@ function makeCard(data) {
     productsList.append(productWrapper);
   }
   newCard.append(productsList);
-
+  //testing
   contentWrapper.append(newCard);
+  // contentWrapper.append(newCard);
   console.log("JSON:", data);
 }
-// const makeCard = (data) => {
-//     // const newCard = document.createElement('div');
-//     console.log("JSON:", data)
-// }
-
-// dom elements
+const cpuData = await getData("cpu");
+const cpuCoolerData = await getData("cpu-cooler");
+const motherboardData = await getData("motherboards");
+const gpuData = await getData("gpu");
+// const cpuData = await getCPUData("cpu");
+// const cpuCoolerData = await getCPUCoolerData("cpu-cooler");
+// const motherboardData = await getMotherboardData("motherboards");
+// const gpuData = await getGPUData("gpu");
 const cpuButton = document.getElementById("picker-cpu");
-cpuButton.addEventListener("click", () => {
-  if (document.getElementById("products-wrapper")) {
-    document.getElementById("products-wrapper").outerHTML = "";
-  }
+const cpuCoolerButton = document.getElementById("picker-cpu-cooler");
+const motherboardButton = document.getElementById("picker-motherboard");
+const gpuButton = document.getElementById("picker-gpu");
+
+cpuButton.addEventListener("click", function (e) {
   makeCard(cpuData);
 });
 
-const cpuCoolerButton = document.getElementById("picker-cpu-cooler");
 cpuCoolerButton.addEventListener("click", () => {
-  if (document.getElementById("products-wrapper")) {
-    document.getElementById("products-wrapper").outerHTML = "";
-  }
   makeCard(cpuCoolerData);
 });
 
-const motherboardButton = document.getElementById("picker-motherboard");
 motherboardButton.addEventListener("click", () => {
-  if (document.getElementById("products-wrapper")) {
-    document.getElementById("products-wrapper").outerHTML = "";
-  }
   makeCard(motherboardData);
 });
 
-const gpuButton = document.getElementById("picker-gpu");
 gpuButton.addEventListener("click", () => {
-  if (document.getElementById("products-wrapper")) {
-    document.getElementById("products-wrapper").outerHTML = "";
-  }
   makeCard(gpuData);
 });

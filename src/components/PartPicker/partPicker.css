@@ -28,7 +28,7 @@ body{
     left: 2rem;
     right: 2rem;
     flex-direction: column;
-    margin-top: 1rem;
+    margin-top: 3rem;
     background: rgba(61, 46, 46, 0.98);
     border: 1px solid white;
     border-radius: 12px;
@@ -42,9 +42,6 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
     border-radius: 10px;
-  
-    
-    
 }
 #products-header h4 {
     color: white;

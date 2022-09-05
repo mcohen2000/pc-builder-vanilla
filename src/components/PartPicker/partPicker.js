@@ -4,7 +4,7 @@ const getData = async (id) => {
   const res = await fetch(`../../../data/${id}.json`);
   const data = await res.json();
   console.log("INSIDE ASYNC GET DATA", data);
-  return data
+  return data;
 };
 
 const contentWrapper = document.getElementById("content-wrapper");
@@ -94,7 +94,7 @@ function makeCard(data) {
           console.log(prices[i].innerText.slice(1));
           totalPrice += parseFloat(prices[i].innerText.slice(1));
         }
-        totalPriceEl.innerText = `$${totalPrice.toFixed(2)}`;
+        totalPriceEl.innerText = `$${totalPrice.toFixed(2)} + tax`;
       }
       updatePriceTotal();
     });
@@ -119,7 +119,7 @@ const cpuCoolerButton = document.getElementById("picker-cpu-cooler");
 const motherboardButton = document.getElementById("picker-motherboard");
 const gpuButton = document.getElementById("picker-gpu");
 
-cpuButton.addEventListener("click", function (e) {
+cpuButton.addEventListener("click", () => {
   makeCard(cpuData);
 });
 

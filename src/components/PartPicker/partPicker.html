@@ -74,7 +74,15 @@
           </div>
           <div id="parts-reciept">
             <p>Part List Summary</p>
-            <h2>Your List</h2>
+            <input type="text" placeholder="Unnamed List" id="list-name">
+            <button id="save-button">Save</button>
+            <select id="saved-lists">
+              <option value="" disabled selected hidden id="select-placeholder">Pick a List</option>
+            </select>
+            <select id="delete-lists">
+              <option value="" disabled selected hidden id="delete-placeholder">Delete a List</option>
+            </select>
+            <button id="clear-button">Clear All Saved Lists</button>
             <h3>Build Total:</h3>
             <p class="table-total-price" id="total-price">$0.00</p>
           </div>

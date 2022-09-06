@@ -18,10 +18,37 @@ body{
     padding: 1rem;
 }
 #parts-reciept{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     width: 200px;
     background-color: rgba(0, 0, 0, .5);
     padding: 1rem;
     border: 1px solid white;
+}
+#list-name{
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: white;
+    background-color: red;
+    padding: 1rem;
+}
+#parts-reciept button{
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: white;
+    background-color: red;
+    padding: 1rem;
+}
+#parts-reciept select{
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid white;
+    color: white;
+    background-color: red;
+    padding: 1rem;
 }
 .addItemButton{
     background-color: rgba(255, 69, 0, 1);

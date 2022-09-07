@@ -1,7 +1,48 @@
 body{
     min-height: 100vh;
     -webkit-tap-highlight-color: transparent;
-    background: linear-gradient(0deg, rgb(255, 238, 0) 0%, rgb(255, 119, 0) 30%, rgb(255, 0, 0) 100%);
+    /* background: linear-gradient(0deg, rgb(255, 238, 0) 0%, rgb(255, 119, 0) 30%, rgb(255, 0, 0) 100%); */
+    background: rgb(40, 40, 40);
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0,0,0,0.1);
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-thumb:hover{
+  	background: rgba(0,0,0,0.4);
+}
+::-webkit-scrollbar-thumb:active{
+  	background: rgba(0,0,0,.9);
+}
+  
+.navbar-brand svg{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: .5rem;
+}
+.navbar-brand{
+    color: white;
+    transition: all .25s;
+}
+.nav-link{
+    color: white;
+    transition: all .25s;
+}
+.navbar-brand:hover{
+    color: cyan;
+    transition: all .25s;
+}
+.nav-link:hover{
+    color: cyan;
+    transition: all .25s;
 }
 #content-wrapper{
     display: flex;

@@ -5,6 +5,7 @@ const currentParts = {
   "cpu-cooler": "",
   motherboard: "",
   gpu: "",
+  "total-price": "",
 };
 const getData = async (id) => {
   const res = await fetch(`../../../data/${id}.json`);
@@ -21,6 +22,7 @@ function updatePriceTotal() {
     totalPrice += parseFloat(prices[i].innerText.slice(1));
   }
   totalPriceEl.innerText = `$${totalPrice.toFixed(2)} + tax`;
+  currentParts["total-price"] = totalPrice.toFixed(2);
 }
 const contentWrapper = document.getElementById("content-wrapper");
 
@@ -78,19 +80,35 @@ function makeCard(data) {
       if (data.title == "CPU") {
         selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name}`;
         currentParts.cpu = data.products[i];
+        document.getElementById("cpu-selection").scrollIntoView({
+          block: "center",
+          behavior: "smooth",
+        });
       }
       if (data.title == "GPU") {
         selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].chipset} ${data.products[i].memory} ${data.products[i].name}`;
         currentParts.gpu = data.products[i];
+        document.getElementById("gpu-selection").scrollIntoView({
+          block: "center",
+          behavior: "smooth",
+        });
       }
       if (data.title == "CPU Cooler") {
         selectionWrapper = document.getElementById("picker-cpu-cooler");
         selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name}`;
         currentParts["cpu-cooler"] = data.products[i];
+        document.getElementById("cpu-cooler-selection").scrollIntoView({
+          block: "center",
+          behavior: "smooth",
+        });
       }
       if (data.title == "Motherboard") {
         selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].series} ${data.products[i].name} ${data.products[i].socket}`;
         currentParts.motherboard = data.products[i];
+        document.getElementById("motherboard-selection").scrollIntoView({
+          block: "center",
+          behavior: "smooth",
+        });
       }
       //set price on list
       let priceWrapper = document.getElementById(
@@ -114,6 +132,9 @@ function makeCard(data) {
   //testing
   contentWrapper.append(newCard);
   // contentWrapper.append(newCard);
+  document.getElementById("content-wrapper").scrollIntoView({
+    behavior: "smooth",
+  });
   console.log("JSON:", data);
 }
 const cpuData = await getData("cpu");
@@ -233,10 +254,7 @@ savedLists.addEventListener("change", (e) => {
 
   updatePriceTotal();
 });
-// loadListButton.addEventListener("click", () => {
-//   console.log("-----Loaded List-----");
-//   console.log("-----Loaded List-----");
-// });
+
 saveListButton.addEventListener("click", () => {
   console.log("-----Saved List-----");
   console.log(`Name: ${currentParts.name}`);

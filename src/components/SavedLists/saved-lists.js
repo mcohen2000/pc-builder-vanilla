@@ -62,10 +62,6 @@ clearListsButton.addEventListener("click", () => {
   if (listWrapper.innerHTML !== "") {
     listWrapper.innerHTML = "";
   }
-  while (delLists.lastChild.id !== "delete-placeholder") {
-    delLists.removeChild(delLists.lastChild);
-  }
-  loadLists();
 });
 
 loadLists();

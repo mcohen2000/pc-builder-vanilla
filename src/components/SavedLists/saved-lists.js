@@ -59,8 +59,8 @@ delLists.addEventListener("change", (e) => {
 });
 clearListsButton.addEventListener("click", () => {
   localStorage.clear();
-  while (savedLists.lastChild.id !== "select-placeholder") {
-    savedLists.removeChild(savedLists.lastChild);
+  if (listWrapper.innerHTML !== "") {
+    listWrapper.innerHTML = "";
   }
   while (delLists.lastChild.id !== "delete-placeholder") {
     delLists.removeChild(delLists.lastChild);

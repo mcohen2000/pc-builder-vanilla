@@ -1,7 +1,42 @@
 body{
     min-height: 100vh;
     -webkit-tap-highlight-color: transparent;
-    background: linear-gradient(0deg, rgb(255, 238, 0) 0%, rgb(255, 119, 0) 30%, rgb(255, 0, 0) 100%);
+    /* background: linear-gradient(0deg, rgb(255, 238, 0) 0%, rgb(255, 119, 0) 30%, rgb(255, 0, 0) 100%); */
+    background: rgb(40, 40, 40);
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.25);
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.75);
+}
+::-webkit-scrollbar-thumb:hover{
+  	background: rgba(255, 255, 255, 1);
+}
+::-webkit-scrollbar-thumb:active{
+  	background: rgba(255, 255, 255, 1);
+}
+  
+.navbar-brand svg{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: .5rem;
+}
+.navbar-brand:hover{
+    color: cyan;
+}
+.nav-link:hover{
+    color: cyan;
 }
 #content-wrapper{
     display: flex;
@@ -31,7 +66,7 @@ body{
     border-radius: 10px;
     border: 2px solid white;
     color: white;
-    background-color: red;
+    background-color: rgb(0, 38, 255);
     padding: 1rem;
 }
 #parts-reciept button{
@@ -39,7 +74,7 @@ body{
     border-radius: 10px;
     border: 2px solid white;
     color: white;
-    background-color: red;
+    background-color: rgb(0, 38, 255);
     padding: 1rem;
 }
 #parts-reciept select{
@@ -47,18 +82,32 @@ body{
     border-radius: 10px;
     border: 2px solid white;
     color: white;
-    background-color: red;
+    background-color: rgb(0, 38, 255);
     padding: 1rem;
 }
 .addItemButton{
-    background-color: rgba(255, 69, 0, 1);
+    background-color: rgb(36, 69, 255);
     width: 100%;
     color: white;
     border: 1px solid white;
     border-radius: 7.5px;
     box-shadow: 0px 0px 5px white;
     padding: 1rem;
-
+    transition: all .5s;
+    
+}
+.reciept-input{
+    transition: all .5s;
+}
+.reciept-input:hover{
+    box-shadow: 0px 0px 5px white;
+    font-size: 1.05rem;
+    transition: all .5s;
+}
+.addItemButton:hover{
+    box-shadow: 0px 0px 10px white;
+    font-size: 1.05rem;
+    transition: all .5s;
 }
 #content-wrapper h2{
     margin-bottom: 3rem;
@@ -73,7 +122,7 @@ body{
     right: 2rem;
     flex-direction: column;
     margin-top: 3rem;
-    background: rgba(61, 46, 46, 0.98);
+    background: rgba(46, 53, 61, 0.98);
     border: 1px solid white;
     border-radius: 12px;
 }
@@ -129,10 +178,11 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
+    transition: all .25s;
 }
 .product:hover{
-    border: 1px solid red;
-    color: red;
+    border: 1px solid cyan;
+    color: cyan;
     cursor: pointer;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -140,8 +190,8 @@ body{
 }
 .productPrice{
     font-weight: 700;
-    text-shadow: 0 0 2px rgb(255, 21, 21), 0 0 1px white;
-    color: rgb(255, 0, 0);
+    text-shadow: 0 0 2px rgb(21, 21, 255), 0 0 1px white;
+    color: cyan;
     align-self: flex-end;
     margin: 1rem;
     margin-top: 0rem;
@@ -150,10 +200,8 @@ body{
     border-bottom: 1px solid white;
     margin-bottom: 1rem;
 }
-button{
-    z-index: 11;
-}
 .component-price{
+    margin-top: .5rem;
     text-align: end;
 }
 #total-price{

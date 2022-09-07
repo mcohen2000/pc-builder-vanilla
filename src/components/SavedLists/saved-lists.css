@@ -10,17 +10,17 @@ body{
 }
 ::-webkit-scrollbar-track {
     border-radius: 10px;
-    background: rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.25);
 }
 ::-webkit-scrollbar-thumb{
     border-radius: 10px;
-    background: rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.75);
 }
 ::-webkit-scrollbar-thumb:hover{
-  	background: rgba(0,0,0,0.4);
+  	background: rgba(255, 255, 255, 1);
 }
 ::-webkit-scrollbar-thumb:active{
-  	background: rgba(0,0,0,.9);
+  	background: rgba(255, 255, 255, 1);
 }
   
 .navbar-brand svg{

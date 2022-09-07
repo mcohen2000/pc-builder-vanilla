@@ -9,22 +9,24 @@
     <link rel="stylesheet" href="partPicker.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top border-bottom">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">PC Builder</a>
+          <a class="navbar-brand d-flex justify-content-center align-items-center" href="../../../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pc-display align-center" viewBox="0 0 16 16">
+            <path d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V1Zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0Zm2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0ZM9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5ZM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5ZM1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2H1.5Z"/>
+          </svg>PC Builder</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../../../index.html">Home</a>
+                <a class="nav-link" aria-current="page" href="../../../index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Part Picker</a>
+                <a class="nav-link active" href="">Part Picker</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Lists</a>
+                <a class="nav-link" href="../SavedLists/saved-lists.html">Saved Lists</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Prebuilds</a>
@@ -74,50 +76,18 @@
           </div>
           <div id="parts-reciept">
             <p>Part List Summary</p>
-            <input type="text" placeholder="Unnamed List" id="list-name">
-            <button id="save-button">Save</button>
-            <select id="saved-lists">
+            <input type="text" placeholder="Type a List Name" id="list-name" class="reciept-input">
+            <button id="save-button" class="reciept-input">Save</button>
+            <select id="saved-lists" class="reciept-input">
               <option value="" disabled selected hidden id="select-placeholder">Pick a List</option>
             </select>
-            <select id="delete-lists">
+            <select id="delete-lists" class="reciept-input">
               <option value="" disabled selected hidden id="delete-placeholder">Delete a List</option>
             </select>
-            <button id="clear-button">Clear All Saved Lists</button>
+            <button id="clear-button" class="reciept-input">Clear All Saved Lists</button>
             <h3>Build Total:</h3>
             <p class="table-total-price" id="total-price">$0.00</p>
           </div>
-        <!-- <div id="picker-wrapper">
-          <table>
-            <tr><th>Components</th><th></th><th>Selection</th><th class="table-head-price" >Price</th></tr>
-
-            <tr><td>CPU</td>
-              <td></td>
-              <td><div id="cpu-selection"><button class="addItemButton" id="picker-cpu">+ Choose A CPU</button></div></td>
-              <td class="table-price" id="cpu-price">$0.00</td>
-            </tr>
-            <tr><td>CPU Cooler</td>
-              <td></td>
-              <td><div id="cpu-cooler-selection"><button class="addItemButton" id="picker-cpu-cooler">+ Choose A CPU Cooler</button></div></td>
-              <td class="table-price" id="cpu-cooler-price">$0.00</td>
-            </tr>
-            <tr><td>Motherboard</td>
-              <td></td>
-              <td><div id="motherboard-selection"><button class="addItemButton" id="picker-motherboard">+ Choose A Motherboard</button></div></td>
-              <td class="table-price" id="motherboard-price">$0.00</td>
-            </tr>
-            <tr><td>Video Card</td>
-              <td></td>
-              <td><div id="gpu-selection"><button class="addItemButton" id="picker-gpu">+ Choose A Video Card</button></div></td>
-              <td class="table-price" id="gpu-price">$0.00</td>
-            </tr>
-            <tr></tr>
-            <tr><td><h3>Total</h3></td>
-              <td></td>
-              <td></td>
-              <td class="table-total-price"><h3 id="total-price">$0.00</h3></td>
-            </tr>
-          </table>
-        </div> -->
       </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
       <script type="module" src="./partPicker.js"></script>

@@ -80,35 +80,19 @@ function makeCard(data) {
       if (data.title == "CPU") {
         selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name}`;
         currentParts.cpu = data.products[i];
-        document.getElementById("cpu-selection").scrollIntoView({
-          block: "center",
-          behavior: "smooth",
-        });
       }
       if (data.title == "GPU") {
         selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].chipset} ${data.products[i].memory} ${data.products[i].name}`;
         currentParts.gpu = data.products[i];
-        document.getElementById("gpu-selection").scrollIntoView({
-          block: "center",
-          behavior: "smooth",
-        });
       }
       if (data.title == "CPU Cooler") {
         selectionWrapper = document.getElementById("picker-cpu-cooler");
         selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name}`;
         currentParts["cpu-cooler"] = data.products[i];
-        document.getElementById("cpu-cooler-selection").scrollIntoView({
-          block: "center",
-          behavior: "smooth",
-        });
       }
       if (data.title == "Motherboard") {
         selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].series} ${data.products[i].name} ${data.products[i].socket}`;
         currentParts.motherboard = data.products[i];
-        document.getElementById("motherboard-selection").scrollIntoView({
-          block: "center",
-          behavior: "smooth",
-        });
       }
       //set price on list
       let priceWrapper = document.getElementById(
@@ -132,19 +116,13 @@ function makeCard(data) {
   //testing
   contentWrapper.append(newCard);
   // contentWrapper.append(newCard);
-  document.getElementById("content-wrapper").scrollIntoView({
-    behavior: "smooth",
-  });
   console.log("JSON:", data);
 }
 const cpuData = await getData("cpu");
 const cpuCoolerData = await getData("cpu-cooler");
 const motherboardData = await getData("motherboards");
 const gpuData = await getData("gpu");
-// const cpuData = await getCPUData("cpu");
-// const cpuCoolerData = await getCPUCoolerData("cpu-cooler");
-// const motherboardData = await getMotherboardData("motherboards");
-// const gpuData = await getGPUData("gpu");
+
 const cpuButton = document.getElementById("picker-cpu");
 const cpuCoolerButton = document.getElementById("picker-cpu-cooler");
 const motherboardButton = document.getElementById("picker-motherboard");

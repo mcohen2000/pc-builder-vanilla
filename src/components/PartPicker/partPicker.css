@@ -116,10 +116,11 @@ body{
 }
 #products-wrapper{
     display: flex;
-    position: absolute;
-    top: 7rem;
+    position: fixed;
+    top: 3rem;
     left: 2rem;
     right: 2rem;
+    max-height: 70vh;
     flex-direction: column;
     margin-top: 3rem;
     background: rgba(46, 53, 61, 0.98);
@@ -131,6 +132,8 @@ body{
     justify-content: space-between;
 }
 #products-list{
+    overflow-y: scroll;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

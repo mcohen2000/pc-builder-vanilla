@@ -70,6 +70,7 @@ function makeCard(data) {
     if (data.title == "GPU") {
       productTitle.innerText = `${data.products[i].manufacturer} ${data.products[i].chipset} ${data.products[i].memory} ${data.products[i].name}`;
     }
+
     productWrapper.append(productTitle);
     productWrapper.append(productPrice);
     productWrapper.addEventListener("click", () => {
@@ -110,6 +111,28 @@ function makeCard(data) {
       updatePriceTotal();
       console.log("Parts", currentParts);
     });
+    //part compatibility check
+    if (currentParts.cpu !== "" && data.title != "CPU") {
+      if (data.title == "CPU Cooler") {
+        console.log("checking cpu cooler");
+        for (let j = 0; j < data.products[i].socket.length; j++) {
+          console.log("SOCKET", data.products[i].socket[j]);
+          if (!data.products[i].socket.includes(currentParts.cpu.socket))
+            productWrapper.classList += " hidden";
+        }
+      }
+      if (
+        data.title == "Motherboard" &&
+        data.products[i].socket !== currentParts.cpu.socket
+      ) {
+        console.log(
+          "NOT COMPATIBLE",
+          data.products[i].name,
+          data.products[i].socket
+        );
+        productWrapper.classList += " hidden";
+      }
+    }
     productsList.append(productWrapper);
   }
   newCard.append(productsList);

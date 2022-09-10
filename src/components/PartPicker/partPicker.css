@@ -53,9 +53,10 @@ body{
     padding: 1rem;
 }
 #parts-reciept{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 96px;
+    height: 100%;
     width: 200px;
     background-color: rgba(0, 0, 0, .5);
     padding: 1rem;
@@ -97,6 +98,7 @@ body{
     
 }
 .reciept-input{
+    margin-bottom: .5rem;
     transition: all .5s;
 }
 .reciept-input:hover{

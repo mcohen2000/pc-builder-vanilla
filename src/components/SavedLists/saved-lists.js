@@ -35,11 +35,27 @@ function loadLists() {
       const listGpu = document.createElement("p");
       listGpu.classList += "list-part";
       listGpu.innerText = `GPU: ${data.gpu.manufacturer} ${data.gpu.chipset} ${data.gpu.memory} ${data.gpu.name} - $${data.gpu.price}`;
+      const listRam = document.createElement("p");
+      listRam.classList += "list-part";
+      listRam.innerText = `Memory: ${data.ram.manufacturer} ${data.ram.name} ${data.ram["memory-config"]} ${data.ram.type}-${data.ram.speed} - $${data.ram.price}`;
+      const listStorage = document.createElement("p");
+      listStorage.classList += "list-part";
+      listStorage.innerText = `Storage: ${data.storage.manufacturer} ${data.storage.name} ${data.storage.size} ${data.storage.type} - $${data.storage.price}`;
+      const listPsu = document.createElement("p");
+      listPsu.classList += "list-part";
+      listPsu.innerText = `Power Supply: ${data.psu.manufacturer} ${data.psu.name} ${data.psu.wattage}W ${data.psu.rating} - $${data.psu.price}`;
+      const listCase = document.createElement("p");
+      listCase.classList += "list-part";
+      listCase.innerText = `Case: ${data.case.manufacturer} ${data.case.name} ${data.case.type} - $${data.case.price}`;
       newCard.append(listName);
       newCard.append(listCpu);
       newCard.append(listCpuCooler);
       newCard.append(listMotherboard);
       newCard.append(listGpu);
+      newCard.append(listRam);
+      newCard.append(listStorage);
+      newCard.append(listPsu);
+      newCard.append(listCase);
       newCard.append(listPrice);
       listWrapper.append(newCard);
     }

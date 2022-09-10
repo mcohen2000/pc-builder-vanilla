@@ -1,0 +1,26 @@
+{
+    "title":"PSU",
+    "products":[
+        {
+            "manufacturer":"EVGA",
+            "name":"SuperNOVA 750 G+",
+            "wattage": 750,
+            "rating":"80+ Gold",
+            "price":109.99
+        },    
+        {
+            "manufacturer":"EVGA",
+            "name":"SuperNOVA 850 GT",
+            "wattage": 850,
+            "rating":"80+ Gold",
+            "price":119.99
+        },
+        {
+            "manufacturer":"EVGA",
+            "name":"SuperNOVA 1000 GT",
+            "wattage": 1000,
+            "rating":"80+ Gold",
+            "price":169.99
+        }   
+    ]
+}

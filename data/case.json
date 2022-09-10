@@ -1,0 +1,19 @@
+{
+    "title":"Case",
+    "products":[
+        {
+            "manufacturer":"NZXT",
+            "name":"H7",
+            "mb-support":["Mini-ITX", "Micro-ATX", "ATX", "EATX"],
+            "type":"Mid-Tower Case",
+            "price":129.99
+        },            
+        {
+            "manufacturer":"NZXT",
+            "name":"H7 Elite",
+            "mb-support":["Mini-ITX", "Micro-ATX", "ATX", "EATX"],
+            "type":"Mid-Tower Case",
+            "price":199.99
+        }            
+    ]
+}

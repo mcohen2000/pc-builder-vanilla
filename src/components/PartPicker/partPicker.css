@@ -183,6 +183,9 @@ body{
     text-align: center;
     transition: all .25s;
 }
+.hidden{
+    display: none;
+}
 .product:hover{
     border: 1px solid cyan;
     color: cyan;

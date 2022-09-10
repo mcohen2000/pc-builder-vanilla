@@ -5,6 +5,10 @@ const currentParts = {
   "cpu-cooler": "",
   motherboard: "",
   gpu: "",
+  ram: "",
+  storage: "",
+  psu: "",
+  case: "",
   "total-price": "",
 };
 const getData = async (id) => {
@@ -70,6 +74,18 @@ function makeCard(data) {
     if (data.title == "GPU") {
       productTitle.innerText = `${data.products[i].manufacturer} ${data.products[i].chipset} ${data.products[i].memory} ${data.products[i].name}`;
     }
+    if (data.title == "PSU") {
+      productTitle.innerText = `${data.products[i].manufacturer} ${data.products[i].name} ${data.products[i].wattage}W ${data.products[i].rating}`;
+    }
+    if (data.title == "RAM") {
+      productTitle.innerText = `${data.products[i].manufacturer} ${data.products[i].name} ${data.products[i]["memory-config"]} ${data.products[i].type}-${data.products[i].speed}`;
+    }
+    if (data.title == "Storage") {
+      productTitle.innerText = `${data.products[i].manufacturer} ${data.products[i].name} ${data.products[i].size} ${data.products[i].type}`;
+    }
+    if (data.title == "Case") {
+      productTitle.innerText = `${data.products[i].manufacturer} ${data.products[i].name} ${data.products[i].type}`;
+    }
 
     productWrapper.append(productTitle);
     productWrapper.append(productPrice);
@@ -94,6 +110,22 @@ function makeCard(data) {
       if (data.title == "Motherboard") {
         selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].series} ${data.products[i].name} ${data.products[i].socket}`;
         currentParts.motherboard = data.products[i];
+      }
+      if (data.title == "PSU") {
+        selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name} ${data.products[i].wattage}W ${data.products[i].rating}`;
+        currentParts.psu = data.products[i];
+      }
+      if (data.title == "RAM") {
+        selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name} ${data.products[i]["memory-config"]} ${data.products[i].type}-${data.products[i].speed}`;
+        currentParts.ram = data.products[i];
+      }
+      if (data.title == "Storage") {
+        selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name} ${data.products[i].size} ${data.products[i].type}`;
+        currentParts.storage = data.products[i];
+      }
+      if (data.title == "Case") {
+        selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name} ${data.products[i].type}`;
+        currentParts.case = data.products[i];
       }
       //set price on list
       let priceWrapper = document.getElementById(
@@ -145,11 +177,19 @@ const cpuData = await getData("cpu");
 const cpuCoolerData = await getData("cpu-cooler");
 const motherboardData = await getData("motherboards");
 const gpuData = await getData("gpu");
+const psuData = await getData("psu");
+const ramData = await getData("ram");
+const storageData = await getData("storage");
+const caseData = await getData("case");
 
 const cpuButton = document.getElementById("picker-cpu");
 const cpuCoolerButton = document.getElementById("picker-cpu-cooler");
 const motherboardButton = document.getElementById("picker-motherboard");
 const gpuButton = document.getElementById("picker-gpu");
+const psuButton = document.getElementById("picker-psu");
+const ramButton = document.getElementById("picker-ram");
+const storageButton = document.getElementById("picker-storage");
+const caseButton = document.getElementById("picker-case");
 
 cpuButton.addEventListener("click", () => {
   makeCard(cpuData);
@@ -165,6 +205,22 @@ motherboardButton.addEventListener("click", () => {
 
 gpuButton.addEventListener("click", () => {
   makeCard(gpuData);
+});
+
+psuButton.addEventListener("click", () => {
+  makeCard(psuData);
+});
+
+ramButton.addEventListener("click", () => {
+  makeCard(ramData);
+});
+
+storageButton.addEventListener("click", () => {
+  makeCard(storageData);
+});
+
+caseButton.addEventListener("click", () => {
+  makeCard(caseData);
 });
 
 const saveListButton = document.getElementById("save-button");

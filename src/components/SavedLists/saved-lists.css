@@ -79,3 +79,20 @@ body{
 .listPart{
     padding: .5rem;
 }
+.reciept-input{
+    background-color: rgb(36, 69, 255);
+    width: 100%;
+    color: white;
+    border: 1px solid white;
+    border-radius: 7.5px;
+    box-shadow: 0px 0px 5px white;
+    padding: 1rem;
+    transition: all .5s;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+.reciept-input:hover{
+    box-shadow: 0px 0px 10px white;
+    font-size: 1.05rem;
+    transition: all .5s;
+}

@@ -307,6 +307,46 @@ savedLists.addEventListener("change", (e) => {
     currentParts.motherboard = pickedPartList.motherboard;
   }
 
+  if (pickedPartList.ram != "") {
+    document.getElementById(
+      "picker-ram"
+    ).innerText = `${pickedPartList.ram.manufacturer} ${pickedPartList.ram.name} ${pickedPartList.ram["memory-config"]} ${pickedPartList.ram.type}-${pickedPartList.ram.speed}`;
+    document.getElementById(
+      "ram-price"
+    ).innerText = `$${pickedPartList.ram.price}`;
+    currentParts.ram = pickedPartList.ram;
+  }
+
+  if (pickedPartList.storage != "") {
+    document.getElementById(
+      "picker-storage"
+    ).innerText = `${pickedPartList.storage.manufacturer} ${pickedPartList.storage.name} ${pickedPartList.storage.size} ${pickedPartList.storage.type}`;
+    document.getElementById(
+      "storage-price"
+    ).innerText = `$${pickedPartList.storage.price}`;
+    currentParts.storage = pickedPartList.storage;
+  }
+
+  if (pickedPartList.case != "") {
+    document.getElementById(
+      "picker-case"
+    ).innerText = `${pickedPartList.case.manufacturer} ${pickedPartList.case.name} ${pickedPartList.case.type}`;
+    document.getElementById(
+      "case-price"
+    ).innerText = `$${pickedPartList.case.price}`;
+    currentParts.case = pickedPartList.case;
+  }
+
+  if (pickedPartList.psu != "") {
+    document.getElementById(
+      "picker-psu"
+    ).innerText = `${pickedPartList.psu.manufacturer} ${pickedPartList.psu.name} ${pickedPartList.psu.wattage}W ${pickedPartList.psu.rating}`;
+    document.getElementById(
+      "case-price"
+    ).innerText = `$${pickedPartList.psu.price}`;
+    currentParts.case = pickedPartList.psu;
+  }
+
   console.log("CURRENT PARTS AFTER LOAD", currentParts);
 
   updatePriceTotal();
@@ -319,6 +359,10 @@ saveListButton.addEventListener("click", () => {
   console.log(`CPU Cooler: ${currentParts["cpu-cooler"]}`);
   console.log(`Motherboard: ${currentParts.motherboard}`);
   console.log(`GPU: ${currentParts.gpu}`);
+  console.log(`Memory: ${currentParts.ram}`);
+  console.log(`Storage: ${currentParts.storage}`);
+  console.log(`Power Supply: ${currentParts.psu}`);
+  console.log(`Case: ${currentParts.case}`);
   console.log("-----Saved List-----");
   setList(currentParts);
   loadLists();

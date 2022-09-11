@@ -342,7 +342,7 @@ savedLists.addEventListener("change", (e) => {
       "picker-psu"
     ).innerText = `${pickedPartList.psu.manufacturer} ${pickedPartList.psu.name} ${pickedPartList.psu.wattage}W ${pickedPartList.psu.rating}`;
     document.getElementById(
-      "case-price"
+      "psu-price"
     ).innerText = `$${pickedPartList.psu.price}`;
     currentParts.case = pickedPartList.psu;
   }

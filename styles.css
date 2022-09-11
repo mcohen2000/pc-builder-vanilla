@@ -31,10 +31,6 @@ body{
     color: white;
     transition: all .25s;
 }
-.nav-link{
-    color: white;
-    transition: all .25s;
-}
 .navbar-brand:hover{
     color: cyan;
     transition: all .25s;

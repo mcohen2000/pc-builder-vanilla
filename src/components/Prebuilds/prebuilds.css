@@ -75,3 +75,11 @@ body{
 .prebuildPart{
     padding: .5rem;
 }
+.partLabel{
+    font-weight: 700;
+}
+.partPrice{
+    font-weight: 700;
+    text-shadow: 0 0 2px rgb(21, 21, 255), 0 0 1px white;
+    color: cyan;
+}

@@ -64,3 +64,14 @@ body{
 #content-wrapper a{
     align-self: center;
 }
+.prebuild{
+    border: 1px solid white;
+    margin: 1rem;
+    padding: 1rem;
+}
+.prebuildName{
+    padding: 1rem;
+}
+.prebuildPart{
+    padding: .5rem;
+}

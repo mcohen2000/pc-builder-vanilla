@@ -22,54 +22,54 @@ function loadLists() {
       listName.innerText = data.name;
       const listPrice = document.createElement("p");
       listPrice.classList += "listPrice";
-      listPrice.innerText = `Total Price: $${data["total-price"]} + tax`;
+      listPrice.innerHTML = `<span class="partLabel">Total Price:</span> <span class="partPrice">$${data["total-price"]}</span> + tax`;
       const listCpu = document.createElement("p");
       listCpu.classList += "listPart";
-      listCpu.innerText = `CPU: ${data.cpu.manufacturer} ${data.cpu.name} - $${data.cpu.price}`;
+      listCpu.innerHTML = `<span class="partLabel">CPU:</span> ${data.cpu.manufacturer} ${data.cpu.name} - <span class="partPrice">$${data.cpu.price}</span>`;
       if (data.cpu === ""){
-        listCpu.innerText = `CPU: Empty - $0.00`;
+        listCpu.innerHTML = `<span class="partLabel">CPU:</span> Empty - <span class="partPrice">$0.00</span>`;
       }
       const listCpuCooler = document.createElement("p");
       listCpuCooler.classList += "listPart";
-      listCpuCooler.innerText = `CPU Cooler: ${data["cpu-cooler"].manufacturer} ${data["cpu-cooler"].name} - $${data["cpu-cooler"].price}`;
+      listCpuCooler.innerHTML = `<span class="partLabel">CPU Cooler:</span> ${data["cpu-cooler"].manufacturer} ${data["cpu-cooler"].name} - <span class="partPrice">$${data["cpu-cooler"].price}</span>`;
       if (data["cpu-cooler"] === ""){
-        listCpuCooler.innerText = `CPU Cooler: Empty - $0.00`;
+        listCpuCooler.innerHTML = `<span class="partLabel">CPU Cooler:</span> Empty - <span class="partPrice">$0.00</span>`;
       }
       const listMotherboard = document.createElement("p");
       listMotherboard.classList += "listPart";
-      listMotherboard.innerText = `Motherboard: ${data.motherboard.manufacturer} ${data.motherboard.series} ${data.motherboard.name} ${data.motherboard.socket} - $${data.motherboard.price}`;
+      listMotherboard.innerHTML = `<span class="partLabel">Motherboard:</span> ${data.motherboard.manufacturer} ${data.motherboard.series} ${data.motherboard.name} ${data.motherboard.socket} - <span class="partPrice">$${data.motherboard.price}</span>`;
       if (data.motherboard === ""){
-        listMotherboard.innerText = `Motherboard: Empty - $0.00`;
+        listMotherboard.innerHTML = `<span class="partLabel">Motherboard:</span> Empty - <span class="partPrice">$0.00</span>`;
       }
       const listGpu = document.createElement("p");
       listGpu.classList += "listPart";
-      listGpu.innerText = `Video Card: ${data.gpu.manufacturer} ${data.gpu.chipset} ${data.gpu.memory} ${data.gpu.name} - $${data.gpu.price}`;
+      listGpu.innerHTML = `<span class="partLabel">Video Card:</span> ${data.gpu.manufacturer} ${data.gpu.chipset} ${data.gpu.memory} ${data.gpu.name} - <span class="partPrice">$${data.gpu.price}</span>`;
       if (data.gpu === ""){
-        listGpu.innerText = `Video Card: Empty - $0.00`;
+        listGpu.innerHTML = `<span class="partLabel">Video Card:</span> Empty - <span class="partPrice">$0.00</span>`;
       }
       const listRam = document.createElement("p");
       listRam.classList += "listPart";
-      listRam.innerText = `Memory: ${data.ram.manufacturer} ${data.ram.name} ${data.ram["memory-config"]} ${data.ram.type}-${data.ram.speed} - $${data.ram.price}`;
+      listRam.innerHTML = `<span class="partLabel">Memory:</span> ${data.ram.manufacturer} ${data.ram.name} ${data.ram["memory-config"]} ${data.ram.type}-${data.ram.speed} - <span class="partPrice">$${data.ram.price}</span>`;
       if (data.ram === ""){
-        listRam.innerText = `Memory: Empty - $0.00`;
+        listRam.innerHTML = `<span class="partLabel">Memory:</span> Empty - <span class="partPrice">$0.00</span>`;
       }
       const listStorage = document.createElement("p");
       listStorage.classList += "listPart";
-      listStorage.innerText = `Storage: ${data.storage.manufacturer} ${data.storage.name} ${data.storage.size} ${data.storage.type} - $${data.storage.price}`;
+      listStorage.innerHTML = `<span class="partLabel">Storage:</span> ${data.storage.manufacturer} ${data.storage.name} ${data.storage.size} ${data.storage.type} - <span class="partPrice">$${data.storage.price}</span>`;
       if (data.storage === ""){
-        listStorage.innerText = `Storage: Empty - $0.00`;
+        listStorage.innerHTML = `<span class="partLabel">Storage:</span> Empty - <span class="partPrice">$0.00</span>`;
       }
       const listPsu = document.createElement("p");
       listPsu.classList += "listPart";
-      listPsu.innerText = `Power Supply: ${data.psu.manufacturer} ${data.psu.name} ${data.psu.wattage}W ${data.psu.rating} - $${data.psu.price}`;
+      listPsu.innerHTML = `<span class="partLabel">Power Supply:</span> ${data.psu.manufacturer} ${data.psu.name} ${data.psu.wattage}W ${data.psu.rating} - <span class="partPrice">$${data.psu.price}</span>`;
       if (data.psu === ""){
-        listPsu.innerText = `Power Supply: Empty - $0.00`;
+        listPsu.innerHTML = `<span class="partLabel">Power Supply:</span> Empty - <span class="partPrice">$0.00</span>`;
       }
       const listCase = document.createElement("p");
       listCase.classList += "listPart";
-      listCase.innerText = `Case: ${data.case.manufacturer} ${data.case.name} ${data.case.type} - $${data.case.price}`;
+      listCase.innerHTML = `<span class="partLabel">Case:</span> ${data.case.manufacturer} ${data.case.name} ${data.case.type} - <span class="partPrice">$${data.case.price}</span>`;
       if (data.case === ""){
-        listCase.innerText = `Case: Empty - $0.00`;
+        listCase.innerHTML = `<span class="partLabel">Case:</span> Empty - <span class="partPrice">$0.00</span>`;
       }
       newCard.append(listName);
       newCard.append(listCpu);

@@ -1,0 +1,85 @@
+{
+    "name": "AMD Low-End Tier",
+    "cpu": {
+        "manufacturer": "AMD",
+        "socket": "AM4",
+        "name": "Ryzen 5 5600X",
+        "model": "5600X",
+        "price": 299.99,
+        "cores": 8
+    },
+    "cpu-cooler": {
+        "manufacturer": "Corsair",
+        "type": "liquid",
+        "name": "iCUE H60i RGB PRO XT Liquid CPU Cooler",
+        "socket": [
+            "LGA1700",
+            "LGA1200",
+            "LGA1150",
+            "LGA1151",
+            "LGA1155",
+            "LGA1156",
+            "LGA1366",
+            "LGA2011",
+            "LGA2066",
+            "AM5",
+            "AM4"
+        ],
+        "price": 99.99,
+        "radiator-size": 120,
+        "fan-size": 120
+    },
+    "motherboard": {
+        "manufacturer": "MSI",
+        "name": "MPG",
+        "socket": "AM4",
+        "series": "X570",
+        "price": 159.99,
+        "Memory-Total-Max": "128GB",
+        "Memory-Slot-Max": "32GB",
+        "Memory-Type": "DDR4"
+    },
+    "gpu": {
+        "manufacturer": "EVGA",
+        "chipset": "GeForce RTX 3070",
+        "name": "XC3 ULTRA GAMING",
+        "memory": "8GB",
+        "price": 559.99
+    },
+    "ram": {
+        "manufacturer": "G.Skill",
+        "name": "Ripjaws V",
+        "total-memory": "32GB",
+        "memory-config": "32GB (2 x 16GB)",
+        "type": "DDR4",
+        "speed": "3600",
+        "price": 99.99
+    },
+    "storage": {
+        "manufacturer": "Samsung",
+        "name": "870 EVO",
+        "size": "1TB",
+        "type": "2.5in. SSD",
+        "price": 99.99
+    },
+    "psu": {
+        "manufacturer": "EVGA",
+        "name": "SuperNOVA 750 G+",
+        "wattage": 750,
+        "rating": "80+ Gold",
+        "price": 109.99
+    },
+    "case": {
+        "manufacturer": "NZXT",
+        "name": "H7",
+        "mb-support": [
+            "Mini-ITX",
+            "Micro-ATX",
+            "ATX",
+            "EATX"
+        ],
+        "type": "Mid-Tower Case",
+        "price": 129.99
+    },
+    "total-price": "1559.92"
+}

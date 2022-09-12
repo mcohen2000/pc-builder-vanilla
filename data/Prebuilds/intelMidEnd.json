@@ -1,0 +1,89 @@
+{
+    "name": "INTEL Mid-End Tier",
+    "cpu": {
+        "manufacturer": "INTEL",
+        "socket": "LGA1700",
+        "name": "Core i7 12700K",
+        "model": "12700K",
+        "price": 449.99,
+        "cores": 12
+    },
+    "cpu-cooler": {
+        "manufacturer": "Corsair",
+        "type": "liquid",
+        "name": "iCUE H100i RGB PRO XT Liquid CPU Cooler",
+        "socket": [
+            "LGA1700",
+            "LGA1200",
+            "LGA1150",
+            "LGA1151",
+            "LGA1155",
+            "LGA1156",
+            "LGA1366",
+            "LGA2011",
+            "LGA2066",
+            "AM5",
+            "AM4",
+            "AM3",
+            "AM2",
+            "sTRX4",
+            "sTR4"
+        ],
+        "price": 119.99,
+        "radiator-size": 240,
+        "fan-size": 120
+    },
+    "motherboard": {
+        "manufacturer": "ASUS",
+        "name": "PRIME",
+        "socket": "LGA1700",
+        "series": "Z690",
+        "price": 259.99,
+        "Memory-Total-Max": "128GB",
+        "Memory-Slot-Max": "32GB",
+        "Memory-Type": "DDR4"
+    },
+    "gpu": {
+        "manufacturer": "EVGA",
+        "chipset": "GeForce RTX 3080",
+        "name": "XC3 ULTRA GAMING",
+        "memory": "12GB",
+        "price": 799.99
+    },
+    "ram": {
+        "manufacturer": "G.Skill",
+        "name": "Trident Z RGB",
+        "total-memory": "32GB",
+        "memory-config": "32GB (2 x 16GB)",
+        "type": "DDR4",
+        "speed": "3600",
+        "price": 119.99
+    },
+    "storage": {
+        "manufacturer": "Samsung",
+        "name": "980 Pro",
+        "size": "1TB",
+        "type": "M.2 NVMe SSD",
+        "price": 129.99
+    },
+    "psu": {
+        "manufacturer": "EVGA",
+        "name": "SuperNOVA 850 GT",
+        "wattage": 850,
+        "rating": "80+ Gold",
+        "price": 119.99
+    },
+    "case": {
+        "manufacturer": "NZXT",
+        "name": "H7",
+        "mb-support": [
+            "Mini-ITX",
+            "Micro-ATX",
+            "ATX",
+            "EATX"
+        ],
+        "type": "Mid-Tower Case",
+        "price": 129.99
+    },
+    "total-price": "2129.92"
+}

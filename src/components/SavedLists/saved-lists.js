@@ -23,6 +23,9 @@ function loadLists() {
       const listPrice = document.createElement("p");
       listPrice.classList += "listPrice";
       listPrice.innerHTML = `<span class="partLabel">Total Price:</span> <span class="partPrice">$${data["total-price"]}</span> + tax`;
+      if (data["total-price"] === "") {
+        listPrice.innerHTML = `<span class="partLabel">Total Price:</span> <span class="partPrice">$0.00</span> + tax`;
+      }
       const listCpu = document.createElement("p");
       listCpu.classList += "listPart";
       listCpu.innerHTML = `<span class="partLabel">CPU:</span> ${data.cpu.manufacturer} ${data.cpu.name} - <span class="partPrice">$${data.cpu.price}</span>`;

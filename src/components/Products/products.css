@@ -151,3 +151,6 @@ body{
     display: none;
     transition: all .5s;
 }
+.productImage{
+    max-width: 90%;
+}

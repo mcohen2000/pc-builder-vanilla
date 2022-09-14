@@ -3,6 +3,7 @@
     "cpu": {
         "manufacturer": "AMD",
         "socket": "AM4",
+        "img": "ryzen5600X",
         "name": "Ryzen 5 5600X",
         "model": "5600X",
         "price": 299.99,
@@ -12,6 +13,7 @@
         "manufacturer": "Corsair",
         "type": "liquid",
         "name": "iCUE H60i RGB PRO XT Liquid CPU Cooler",
+        "img": "corsairH60i",
         "socket": [
             "LGA1700",
             "LGA1200",
@@ -30,11 +32,12 @@
         "fan-size": 120
     },
     "motherboard": {
-        "manufacturer": "MSI",
-        "name": "MPG",
+        "manufacturer": "ASUS",
+        "name": "TUF",
+        "img": "asusTUFX570",
         "socket": "AM4",
         "series": "X570",
-        "price": 159.99,
+        "price": 209.99,
         "Memory-Total-Max": "128GB",
         "Memory-Slot-Max": "32GB",
         "Memory-Type": "DDR4"
@@ -43,12 +46,14 @@
         "manufacturer": "EVGA",
         "chipset": "GeForce RTX 3070",
         "name": "XC3 ULTRA GAMING",
+        "img": "evga3070",
         "memory": "8GB",
         "price": 559.99
     },
     "ram": {
         "manufacturer": "G.Skill",
         "name": "Ripjaws V",
+        "img": "gSkillRipjaws",
         "total-memory": "32GB",
         "memory-config": "32GB (2 x 16GB)",
         "type": "DDR4",
@@ -58,6 +63,7 @@
     "storage": {
         "manufacturer": "Samsung",
         "name": "870 EVO",
+        "img": "samsung870EVO",
         "size": "1TB",
         "type": "2.5in. SSD",
         "price": 99.99
@@ -65,6 +71,7 @@
     "psu": {
         "manufacturer": "EVGA",
         "name": "SuperNOVA 750 G+",
+        "img": "psuEVGA750",
         "wattage": 750,
         "rating": "80+ Gold",
         "price": 109.99
@@ -72,6 +79,7 @@
     "case": {
         "manufacturer": "NZXT",
         "name": "H7",
+        "img": "nzxtH7",
         "mb-support": [
             "Mini-ITX",
             "Micro-ATX",
@@ -81,5 +89,5 @@
         "type": "Mid-Tower Case",
         "price": 129.99
     },
-    "total-price": "1559.92"
+    "total-price": "1609.92"
 }

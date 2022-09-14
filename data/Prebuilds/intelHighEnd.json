@@ -3,6 +3,7 @@
     "cpu": {
         "manufacturer": "INTEL",
         "socket": "LGA1700",
+        "img": "core12900k",
         "name": "Core i9 12900K",
         "model": "12900K",
         "price": 649.99,
@@ -12,6 +13,7 @@
         "manufacturer": "Corsair",
         "type": "liquid",
         "name": "iCUE H150i RGB PRO XT Liquid CPU Cooler",
+        "img": "corsairH150i",
         "socket": [
             "LGA1700",
             "LGA1200",
@@ -34,25 +36,28 @@
         "fan-size": 120
     },
     "motherboard": {
-        "manufacturer": "ASUS",
-        "name": "ROG",
+        "manufacturer": "MSI",
+        "name": "MEG",
+        "img": "msiMEGZ690",
         "socket": "LGA1700",
         "series": "Z690",
-        "price": 349.99,
+        "price": 449.99,
         "Memory-Total-Max": "128GB",
         "Memory-Slot-Max": "32GB",
-        "Memory-Type": "DDR4"
+        "Memory-Type": "DDR5"
     },
     "gpu": {
         "manufacturer": "EVGA",
         "chipset": "GeForce RTX 3090",
-        "name": "XC3 ULTRA GAMING",
+        "img": "evga3090",
+        "name": "FTW3 ULTRA GAMING",
         "memory": "24GB",
         "price": 1179.99
     },
     "ram": {
         "manufacturer": "G.Skill",
         "name": "Trident Z RGB",
+        "img": "gSkillTrident",
         "total-memory": "64GB",
         "memory-config": "64GB (2 x 32GB)",
         "type": "DDR4",
@@ -62,6 +67,7 @@
     "storage": {
         "manufacturer": "Samsung",
         "name": "980 Pro",
+        "img": "samsung980PRO",
         "size": "1TB",
         "type": "M.2 NVMe SSD",
         "price": 129.99
@@ -69,6 +75,7 @@
     "psu": {
         "manufacturer": "EVGA",
         "name": "SuperNOVA 1000 GT",
+        "img": "psuEVGA1000",
         "wattage": 1000,
         "rating": "80+ Gold",
         "price": 169.99
@@ -76,6 +83,7 @@
     "case": {
         "manufacturer": "NZXT",
         "name": "H7 Elite",
+        "img": "nzxtH7Elite",
         "mb-support": [
             "Mini-ITX",
             "Micro-ATX",
@@ -85,5 +93,5 @@
         "type": "Mid-Tower Case",
         "price": 199.99
     },
-    "total-price": "3069.92"
+    "total-price": "3169.92"
 }

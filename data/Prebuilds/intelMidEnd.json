@@ -1,8 +1,9 @@
 {
-    "name": "INTEL Mid-End Tier",
+    "name": "INTEL Middle Tier",
     "cpu": {
         "manufacturer": "INTEL",
         "socket": "LGA1700",
+        "img": "core12700k",
         "name": "Core i7 12700K",
         "model": "12700K",
         "price": 449.99,
@@ -12,6 +13,7 @@
         "manufacturer": "Corsair",
         "type": "liquid",
         "name": "iCUE H100i RGB PRO XT Liquid CPU Cooler",
+        "img": "corsairH100i",
         "socket": [
             "LGA1700",
             "LGA1200",
@@ -34,11 +36,12 @@
         "fan-size": 120
     },
     "motherboard": {
-        "manufacturer": "ASUS",
-        "name": "PRIME",
+        "manufacturer": "MSI",
+        "name": "MPG",
+        "img": "msiMPGZ690",
         "socket": "LGA1700",
         "series": "Z690",
-        "price": 259.99,
+        "price": 279.99,
         "Memory-Total-Max": "128GB",
         "Memory-Slot-Max": "32GB",
         "Memory-Type": "DDR4"
@@ -46,13 +49,15 @@
     "gpu": {
         "manufacturer": "EVGA",
         "chipset": "GeForce RTX 3080",
-        "name": "XC3 ULTRA GAMING",
+        "img": "evga3080",
+        "name": "FTW3 ULTRA GAMING",
         "memory": "12GB",
         "price": 799.99
     },
     "ram": {
         "manufacturer": "G.Skill",
         "name": "Trident Z RGB",
+        "img": "gSkillTrident",
         "total-memory": "32GB",
         "memory-config": "32GB (2 x 16GB)",
         "type": "DDR4",
@@ -62,6 +67,7 @@
     "storage": {
         "manufacturer": "Samsung",
         "name": "980 Pro",
+        "img": "samsung980PRO",
         "size": "1TB",
         "type": "M.2 NVMe SSD",
         "price": 129.99
@@ -69,6 +75,7 @@
     "psu": {
         "manufacturer": "EVGA",
         "name": "SuperNOVA 850 GT",
+        "img": "psuEVGA850",
         "wattage": 850,
         "rating": "80+ Gold",
         "price": 119.99
@@ -76,6 +83,7 @@
     "case": {
         "manufacturer": "NZXT",
         "name": "H7",
+        "img": "nzxtH7",
         "mb-support": [
             "Mini-ITX",
             "Micro-ATX",
@@ -85,5 +93,5 @@
         "type": "Mid-Tower Case",
         "price": 129.99
     },
-    "total-price": "2129.92"
+    "total-price": "2149.92"
 }

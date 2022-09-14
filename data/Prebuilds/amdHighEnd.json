@@ -3,6 +3,7 @@
     "cpu": {
         "manufacturer": "AMD",
         "socket": "AM4",
+        "img": "ryzen5950X",
         "name": "Ryzen 9 5950X",
         "model": "5950X",
         "price": 799.99,
@@ -12,6 +13,7 @@
         "manufacturer": "Corsair",
         "type": "liquid",
         "name": "iCUE H150i RGB PRO XT Liquid CPU Cooler",
+        "img": "corsairH150i",
         "socket": [
             "LGA1700",
             "LGA1200",
@@ -36,6 +38,7 @@
     "motherboard": {
         "manufacturer": "ASUS",
         "name": "ROG",
+        "img": "asusROGX570",
         "socket": "AM4",
         "series": "X570",
         "price": 349.99,
@@ -46,13 +49,15 @@
     "gpu": {
         "manufacturer": "EVGA",
         "chipset": "GeForce RTX 3090",
-        "name": "XC3 ULTRA GAMING",
+        "img": "evga3090",
+        "name": "FTW3 ULTRA GAMING",
         "memory": "24GB",
         "price": 1179.99
     },
     "ram": {
         "manufacturer": "G.Skill",
         "name": "Trident Z RGB",
+        "img": "gSkillTrident",
         "total-memory": "64GB",
         "memory-config": "64GB (2 x 32GB)",
         "type": "DDR4",
@@ -62,6 +67,7 @@
     "storage": {
         "manufacturer": "Samsung",
         "name": "980 Pro",
+        "img": "samsung980PRO",
         "size": "1TB",
         "type": "M.2 NVMe SSD",
         "price": 129.99
@@ -69,6 +75,7 @@
     "psu": {
         "manufacturer": "EVGA",
         "name": "SuperNOVA 1000 GT",
+        "img": "psuEVGA1000",
         "wattage": 1000,
         "rating": "80+ Gold",
         "price": 169.99
@@ -76,6 +83,7 @@
     "case": {
         "manufacturer": "NZXT",
         "name": "H7 Elite",
+        "img": "nzxtH7Elite",
         "mb-support": [
             "Mini-ITX",
             "Micro-ATX",

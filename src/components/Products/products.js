@@ -83,8 +83,11 @@ function makeCard(data) {
     if (data.title == "Case") {
       productTitle.innerText = `${data.products[i].manufacturer} ${data.products[i].name} ${data.products[i].type}`;
     }
-
+    const productImage = document.createElement("img");
+    productImage.src = `../../../images/${data.products[i].img}.jpg`;
+    productImage.classList += "productImage"
     productWrapper.append(productTitle);
+    productWrapper.append(productImage);
     productWrapper.append(productPrice);
 
     // minimize lists on page load

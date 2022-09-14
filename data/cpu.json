@@ -4,6 +4,7 @@
         {
             "manufacturer":"AMD",
             "socket":"AM4",
+            "img":"ryzen5600X",
             "name":"Ryzen 5 5600X",
             "model":"5600X",
             "price":299.99,
@@ -12,6 +13,7 @@
         {
             "manufacturer":"AMD",
             "socket":"AM4",
+            "img":"ryzen5800X",
             "name":"Ryzen 7 5800X",
             "model":"5800X",
             "price":449.99,
@@ -20,6 +22,7 @@
         {
             "manufacturer":"AMD",
             "socket":"AM4",
+            "img":"ryzen5950X",
             "name":"Ryzen 9 5950X",
             "model":"5950X",
             "price":799.99,
@@ -28,6 +31,7 @@
         {
             "manufacturer":"INTEL",
             "socket":"LGA1700",
+            "img":"core12600k",
             "name":"Core i5 12600K",
             "model":"12600K",
             "price":319.99,
@@ -36,6 +40,7 @@
         {
             "manufacturer":"INTEL",
             "socket":"LGA1700",
+            "img":"core12700k",
             "name":"Core i7 12700K",
             "model":"12700K",
             "price":449.99,
@@ -44,6 +49,7 @@
         {
             "manufacturer":"INTEL",
             "socket":"LGA1700",
+            "img":"core12900k",
             "name":"Core i9 12900K",
             "model":"12900K",
             "price":649.99,

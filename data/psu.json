@@ -4,6 +4,7 @@
         {
             "manufacturer":"EVGA",
             "name":"SuperNOVA 750 G+",
+            "img":"psuEVGA750",
             "wattage": 750,
             "rating":"80+ Gold",
             "price":109.99
@@ -11,6 +12,7 @@
         {
             "manufacturer":"EVGA",
             "name":"SuperNOVA 850 GT",
+            "img":"psuEVGA850",
             "wattage": 850,
             "rating":"80+ Gold",
             "price":119.99
@@ -18,6 +20,7 @@
         {
             "manufacturer":"EVGA",
             "name":"SuperNOVA 1000 GT",
+            "img":"psuEVGA1000",
             "wattage": 1000,
             "rating":"80+ Gold",
             "price":169.99

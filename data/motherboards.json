@@ -4,6 +4,7 @@
         {
             "manufacturer":"ASUS",
             "name":"PRIME",
+            "img":"asusPrimeX570",
             "socket":"AM4",
             "series":"X570",
             "price":259.99,
@@ -14,6 +15,7 @@
         {
             "manufacturer":"ASUS",
             "name":"TUF",
+            "img":"asusTUFX570",
             "socket":"AM4",
             "series":"X570",
             "price":209.99,
@@ -24,6 +26,7 @@
         {
             "manufacturer":"ASUS",
             "name":"ROG",
+            "img":"asusROGX570",
             "socket":"AM4",
             "series":"X570",
             "price":349.99,
@@ -34,9 +37,10 @@
         {
             "manufacturer":"MSI",
             "name":"MPG",
+            "img":"msiMPGX570",
             "socket":"AM4",
             "series":"X570",
-            "price":159.99,
+            "price":269.99,
             "Memory-Total-Max":"128GB",
             "Memory-Slot-Max":"32GB",
             "Memory-Type":"DDR4" 
@@ -44,6 +48,7 @@
         {
             "manufacturer":"MSI",
             "name":"MAG",
+            "img":"msiMAGX570",
             "socket":"AM4",
             "series":"X570",
             "price":229.99,
@@ -54,6 +59,7 @@
         {
             "manufacturer":"MSI",
             "name":"MEG",
+            "img":"msiMEGX570",
             "socket":"AM4",
             "series":"X570",
             "price":329.99,
@@ -64,6 +70,7 @@
         {
             "manufacturer":"ASUS",
             "name":"PRIME",
+            "img":"asusPrimeZ690",
             "socket":"LGA1700",
             "series":"Z690",
             "price":259.99,
@@ -74,9 +81,10 @@
         {
             "manufacturer":"ASUS",
             "name":"TUF",
+            "img":"asusTUFZ690",
             "socket":"LGA1700",
             "series":"Z690",
-            "price":209.99,
+            "price":279.99,
             "Memory-Total-Max":"128GB",
             "Memory-Slot-Max":"32GB",
             "Memory-Type":"DDR4"
@@ -84,6 +92,7 @@
         {
             "manufacturer":"ASUS",
             "name":"ROG",
+            "img":"asusROGZ690",
             "socket":"LGA1700",
             "series":"Z690",
             "price":349.99,
@@ -94,9 +103,10 @@
         {
             "manufacturer":"MSI",
             "name":"MPG",
+            "img":"msiMPGZ690",
             "socket":"LGA1700",
             "series":"Z690",
-            "price":159.99,
+            "price":279.99,
             "Memory-Total-Max":"128GB",
             "Memory-Slot-Max":"32GB",
             "Memory-Type":"DDR4" 
@@ -104,9 +114,10 @@
         {
             "manufacturer":"MSI",
             "name":"MAG",
+            "img":"msiMAGZ690",
             "socket":"LGA1700",
             "series":"Z690",
-            "price":229.99,
+            "price":269.99,
             "Memory-Total-Max":"128GB",
             "Memory-Slot-Max":"32GB",
             "Memory-Type":"DDR4"
@@ -114,12 +125,13 @@
         {
             "manufacturer":"MSI",
             "name":"MEG",
+            "img":"msiMEGZ690",
             "socket":"LGA1700",
             "series":"Z690",
-            "price":329.99,
+            "price":449.99,
             "Memory-Total-Max":"128GB",
             "Memory-Slot-Max":"32GB",
-            "Memory-Type":"DDR4"
+            "Memory-Type":"DDR5"
         }
     ]
         

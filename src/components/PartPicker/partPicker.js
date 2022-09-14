@@ -59,6 +59,9 @@ function makeCard(data) {
     const productWrapper = document.createElement("div");
     productWrapper.classList += "product";
     const productTitle = document.createElement("p");
+    const productImage = document.createElement("img");
+    productImage.classList += "productImage";
+    productImage.src = `../../../images/${data.products[i].img}.jpg`;
     const productPrice = document.createElement("p");
     productPrice.classList += "productPrice";
     productPrice.innerText = `$${data.products[i].price}`;
@@ -88,6 +91,7 @@ function makeCard(data) {
     }
 
     productWrapper.append(productTitle);
+    productWrapper.append(productImage);
     productWrapper.append(productPrice);
     productWrapper.addEventListener("click", () => {
       //set selection on list
@@ -95,36 +99,36 @@ function makeCard(data) {
         `picker-${data.title.toLowerCase()}`
       );
       if (data.title == "CPU") {
-        selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name}`;
+        selectionWrapper.innerHTML = `<img class="productImage" src="../../../images/${data.products[i].img}.jpg">${data.products[i].manufacturer} ${data.products[i].name}`;
         currentParts.cpu = data.products[i];
       }
       if (data.title == "GPU") {
-        selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].chipset} ${data.products[i].memory} ${data.products[i].name}`;
+        selectionWrapper.innerHTML = `<img class="productImage" src="../../../images/${data.products[i].img}.jpg">${data.products[i].manufacturer} ${data.products[i].chipset} ${data.products[i].memory} ${data.products[i].name}`;
         currentParts.gpu = data.products[i];
       }
       if (data.title == "CPU Cooler") {
         selectionWrapper = document.getElementById("picker-cpu-cooler");
-        selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name}`;
+        selectionWrapper.innerHTML = `<img class="productImage" src="../../../images/${data.products[i].img}.jpg">${data.products[i].manufacturer} ${data.products[i].name}`;
         currentParts["cpu-cooler"] = data.products[i];
       }
       if (data.title == "Motherboard") {
-        selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].series} ${data.products[i].name} ${data.products[i].socket}`;
+        selectionWrapper.innerHTML = `<img class="productImage" src="../../../images/${data.products[i].img}.jpg">${data.products[i].manufacturer} ${data.products[i].series} ${data.products[i].name} ${data.products[i].socket}`;
         currentParts.motherboard = data.products[i];
       }
       if (data.title == "PSU") {
-        selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name} ${data.products[i].wattage}W ${data.products[i].rating}`;
+        selectionWrapper.innerHTML = `<img class="productImage" src="../../../images/${data.products[i].img}.jpg">${data.products[i].manufacturer} ${data.products[i].name} ${data.products[i].wattage}W ${data.products[i].rating}`;
         currentParts.psu = data.products[i];
       }
       if (data.title == "RAM") {
-        selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name} ${data.products[i]["memory-config"]} ${data.products[i].type}-${data.products[i].speed}`;
+        selectionWrapper.innerHTML = `<img class="productImage" src="../../../images/${data.products[i].img}.jpg">${data.products[i].manufacturer} ${data.products[i].name} ${data.products[i]["memory-config"]} ${data.products[i].type}-${data.products[i].speed}`;
         currentParts.ram = data.products[i];
       }
       if (data.title == "Storage") {
-        selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name} ${data.products[i].size} ${data.products[i].type}`;
+        selectionWrapper.innerHTML = `<img class="productImage" src="../../../images/${data.products[i].img}.jpg">${data.products[i].manufacturer} ${data.products[i].name} ${data.products[i].size} ${data.products[i].type}`;
         currentParts.storage = data.products[i];
       }
       if (data.title == "Case") {
-        selectionWrapper.innerText = `${data.products[i].manufacturer} ${data.products[i].name} ${data.products[i].type}`;
+        selectionWrapper.innerHTML = `<img class="productImage" src="../../../images/${data.products[i].img}.jpg">${data.products[i].manufacturer} ${data.products[i].name} ${data.products[i].type}`;
         currentParts.case = data.products[i];
       }
       //set price on list

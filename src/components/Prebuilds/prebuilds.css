@@ -83,3 +83,9 @@ body{
     text-shadow: 0 0 2px rgb(21, 21, 255), 0 0 1px white;
     color: cyan;
 }
+.partImage{
+    max-width: 150px;
+    border: 1px solid rgb(69, 69, 69);
+    padding: .5rem;
+    margin: .5rem;
+}

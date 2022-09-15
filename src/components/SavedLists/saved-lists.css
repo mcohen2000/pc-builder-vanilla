@@ -113,3 +113,14 @@ body{
     font-size: 1.05rem;
     transition: all .5s;
 }
+@media screen and (max-width: 800px) {
+    #content-wrapper{
+        padding: 2rem 0rem;
+    }
+    .partImage{
+        max-width: 100px;
+        padding: .5rem;
+        margin: .5rem;
+    }
+
+}

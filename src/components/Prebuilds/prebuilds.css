@@ -98,6 +98,10 @@ body{
     #content-wrapper{
         padding: 2rem 0rem;
     }
+    .prebuildPart{
+        padding: 0.5rem 0;
+        margin: 0 0;
+    }
     .partImage{
         max-width: 100px;
         padding: .5rem;

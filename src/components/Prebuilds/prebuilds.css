@@ -73,10 +73,15 @@ body{
     padding: 1rem;
 }
 .prebuildPart{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 1rem;
     padding: .5rem;
 }
 .partLabel{
     font-weight: 700;
+    width: 10rem;
 }
 .partPrice{
     font-weight: 700;
@@ -88,4 +93,15 @@ body{
     border: 1px solid rgb(69, 69, 69);
     padding: .5rem;
     margin: .5rem;
+}
+@media screen and (max-width: 800px) {
+    #content-wrapper{
+        padding: 2rem 0rem;
+    }
+    .partImage{
+        max-width: 100px;
+        padding: .5rem;
+        margin: .5rem;
+    }
+
 }

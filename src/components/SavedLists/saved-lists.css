@@ -74,10 +74,16 @@ body{
     padding: 1rem;
 }
 .listPart{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 1rem;
     padding: .5rem;
 }
+
 .partLabel{
     font-weight: 700;
+    width: 10rem;
 }
 .partImage{
     max-width: 150px;

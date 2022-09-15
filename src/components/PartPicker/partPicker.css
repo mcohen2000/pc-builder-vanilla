@@ -3,6 +3,7 @@ body{
     -webkit-tap-highlight-color: transparent;
     /* background: linear-gradient(0deg, rgb(255, 238, 0) 0%, rgb(255, 119, 0) 30%, rgb(255, 0, 0) 100%); */
     background: rgb(40, 40, 40);
+    background-image: url(../../../images/circuitBG.svg);
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white;
@@ -39,7 +40,6 @@ body{
     color: cyan;
 }
 #content-wrapper{
-    background-image: url(../../../images/circuitBG.svg);
     display: flex;
     flex-direction: row;
     justify-content: space-around;

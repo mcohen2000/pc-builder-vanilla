@@ -2,6 +2,7 @@ body{
     min-height: 100vh;
     -webkit-tap-highlight-color: transparent;
     background: rgb(40, 40, 40);
+    background-image: url(./images/circuitBG.svg);
 }
 ::-webkit-scrollbar {
     width: 6px;
@@ -40,7 +41,6 @@ body{
     transition: all .25s;
 }
 #content-wrapper{
-    background-image: url(./images/circuitBG.svg);
     display: flex;
     flex-direction: column;
     justify-content: center;

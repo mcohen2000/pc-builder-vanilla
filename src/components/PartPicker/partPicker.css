@@ -39,6 +39,7 @@ body{
     color: cyan;
 }
 #content-wrapper{
+    background-image: url(../../../images/circuitBG.svg);
     display: flex;
     flex-direction: row;
     justify-content: space-around;

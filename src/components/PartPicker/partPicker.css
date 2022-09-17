@@ -99,6 +99,10 @@ body{
     transition: all .5s;
     
 }
+.addItemButton:hover .productImage{
+    padding: .75rem;
+    transition: all .25s;
+}
 .reciept-input{
     margin-bottom: .5rem;
     background-color: rgb(94, 118, 255);
@@ -189,12 +193,10 @@ body{
     transition: all .25s;
 }
 .productImage{
-    padding: .5rem;
-    width: 150px;
-}
-.product .productImage{
+    transition: all .25s;
     padding: .5rem;
     width: 90%;
+    max-width: 150px;
 }
 .hidden{
     display: none;

@@ -3,7 +3,6 @@ const listWrapper = document.getElementById("lists-wrapper");
 const getData = async (id) => {
   const res = await fetch(`../../../data/Prebuilds/${id}.json`);
   const data = await res.json();
-  // console.log("INSIDE ASYNC GET DATA", data);
   return data;
 };
 function displayPrebuild(data) {

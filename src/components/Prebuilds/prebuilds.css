@@ -102,11 +102,20 @@ body{
     .prebuildPart{
         padding: 0.5rem 0;
         margin: 0 0;
+        justify-content: center;
     }
     .partImage{
         max-width: 100px;
         padding: .5rem;
         margin: .5rem;
     }
-
+}
+@media screen and (max-width: 426px) {
+    .partLabel{
+        max-width: 8rem;
+        font-size: 90%;
+    }
+    .prebuildPart{
+        font-size: 75%;
+    }
 }

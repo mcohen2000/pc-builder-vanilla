@@ -84,10 +84,17 @@ body{
     font-weight: 700;
     width: 10rem;
 }
+.partName{
+    margin: .5rem;
+}
 .partPrice{
+    padding: 0.5rem;
     font-weight: 700;
     text-shadow: 0 0 2px rgb(21, 21, 255), 0 0 1px white;
     color: cyan;
+}
+.prebuildPrice .partPrice{
+    padding: 0.25rem;
 }
 .partImage{
     max-width: 150px;

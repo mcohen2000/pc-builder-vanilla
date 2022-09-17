@@ -105,7 +105,7 @@ function loadLists() {
       }
       const listCase = document.createElement("p");
       listCase.classList += "listPart";
-      listCase.innerHTML = `<span class="partLabel">Case:</span> ${data.case.manufacturer} ${data.case.name} ${data.case.type} - <span class="partPrice">$${data.case.price}</span>`;
+      listCase.innerHTML = `<span class="partLabel">Case:</span><span class="partName">${data.case.manufacturer} ${data.case.name} ${data.case.type} - </span><span class="partPrice">$${data.case.price}</span>`;
       if (data.case.img) {
         listCase.innerHTML = `<span class="partLabel">Case:</span><img class="partImage" src="../../../assets/${data.case.img}.jpg"><span class="partName">${data.case.manufacturer} ${data.case.name} ${data.case.type} - </span><span class="partPrice">$${data.case.price}</span>`;
       }

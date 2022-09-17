@@ -400,7 +400,7 @@ savedLists.addEventListener("change", (e) => {
   if (pickedPartList.psu === "") {
     document.getElementById("picker-psu").innerHTML = `+ Choose A Power Supply`;
     document.getElementById("psu-price").innerText = `$0.00`;
-    currentParts.case = pickedPartList.psu;
+    currentParts.psu = pickedPartList.psu;
   }
 
   console.log("CURRENT PARTS AFTER LOAD", currentParts);

@@ -6,6 +6,10 @@ function loadLists() {
   if (listWrapper.innerHTML !== "") {
     listWrapper.innerHTML = "";
   }
+  if (delLists.innerHTML !== "") {
+    delLists.innerHTML = `<option value="" disabled selected hidden id="delete-placeholder">Delete a List</option>`;
+  }
+
   for (let i = 0; i < localStorage.length; i++) {
     // check if localStorage item has motherboard to validate item as a part list
     if (localStorage.getItem(localStorage.key(i)).includes("motherboard")) {
@@ -17,9 +21,19 @@ function loadLists() {
 
       const newCard = document.createElement("div");
       newCard.classList += "listCard";
+      const listHeader = document.createElement("div");
+      listHeader.classList += "listHeader";
       const listName = document.createElement("h4");
       listName.classList += "listName";
       listName.innerText = data.name;
+      const listDelBtn = document.createElement("i");
+      listDelBtn.classList += "listDelBtn bi-trash3";
+      listDelBtn.addEventListener("click", () => {
+        localStorage.removeItem(localStorage.key(i));
+        loadLists();
+      });
+      listHeader.append(listName);
+      listHeader.append(listDelBtn);
       const listPrice = document.createElement("p");
       listPrice.classList += "listPrice";
       listPrice.innerHTML = `<span class="partLabel">Total Price:</span> <span class="partPrice">$${data["total-price"]}</span> + tax`;
@@ -98,7 +112,7 @@ function loadLists() {
       if (data.case === "") {
         listCase.innerHTML = `<span class="partLabel">Case:</span> Empty - <span class="partPrice">$0.00</span>`;
       }
-      newCard.append(listName);
+      newCard.append(listHeader);
       newCard.append(listCpu);
       newCard.append(listCpuCooler);
       newCard.append(listMotherboard);
@@ -126,9 +140,7 @@ delLists.addEventListener("change", (e) => {
 });
 clearListsButton.addEventListener("click", () => {
   localStorage.clear();
-  if (listWrapper.innerHTML !== "") {
-    listWrapper.innerHTML = "";
-  }
+  loadLists();
 });
 
 loadLists();

@@ -2,7 +2,7 @@ body{
     min-height: 100vh;
     -webkit-tap-highlight-color: transparent;
     background: rgb(40, 40, 40);
-    background-image: url(./images/circuitBG.svg);
+    background-image: url(./assets/circuitBG.svg);
 }
 ::-webkit-scrollbar {
     width: 6px;

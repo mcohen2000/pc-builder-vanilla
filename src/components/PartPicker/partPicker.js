@@ -243,6 +243,12 @@ function setList(partList) {
 }
 // add saved lists to select elements
 function loadLists() {
+  if (delLists.innerHTML !== "") {
+    delLists.innerHTML = `<option value="" disabled selected hidden id="delete-placeholder">Delete a List</option>`;
+  }
+  if (savedLists.innerHTML !== "") {
+    savedLists.innerHTML = `<option value="" disabled selected hidden id="delete-placeholder">Pick a List</option>`;
+  }
   for (let i = 0; i < localStorage.length; i++) {
     // check if localStorage item has motherboard to validate item as a part list
     if (localStorage.getItem(localStorage.key(i)).includes("motherboard")) {
@@ -274,80 +280,153 @@ savedLists.addEventListener("change", (e) => {
   if (pickedPartList.cpu != "") {
     document.getElementById(
       "picker-cpu"
-    ).innerText = `${pickedPartList.cpu.manufacturer} ${pickedPartList.cpu.name}`;
+    ).innerHTML = `<img class="productImage" src="../../../images/${pickedPartList.cpu.img}.jpg">${pickedPartList.cpu.manufacturer} ${pickedPartList.cpu.name}`;
     document.getElementById(
       "cpu-price"
     ).innerText = `$${pickedPartList.cpu.price}`;
     currentParts.cpu = pickedPartList.cpu;
   }
+  if (pickedPartList.cpu === "") {
+    document.getElementById(
+      "picker-cpu"
+    ).innerHTML = `+ Choose A CPU`;
+    document.getElementById(
+      "cpu-price"
+    ).innerText = `$0.00`;
+    currentParts.cpu = pickedPartList.cpu;
+  }
+
 
   if (pickedPartList["cpu-cooler"] != "") {
     document.getElementById(
       "picker-cpu-cooler"
-    ).innerText = `${pickedPartList["cpu-cooler"].manufacturer} ${pickedPartList["cpu-cooler"].name} ${pickedPartList["cpu-cooler"].name}`;
+    ).innerHTML = `<img class="productImage" src="../../../images/${pickedPartList["cpu-cooler"].img}.jpg">${pickedPartList["cpu-cooler"].manufacturer} ${pickedPartList["cpu-cooler"].name} ${pickedPartList["cpu-cooler"].name}`;
     document.getElementById(
       "cpu-cooler-price"
     ).innerText = `$${pickedPartList["cpu-cooler"].price}`;
+    currentParts["cpu-cooler"] = pickedPartList["cpu-cooler"];
+  }
+  if (pickedPartList["cpu-cooler"] === "") {
+    document.getElementById(
+      "picker-cpu-cooler"
+    ).innerHTML = `+ Choose A CPU Cooler`;
+    document.getElementById(
+      "cpu-cooler-price"
+    ).innerText = `$0.00`;
     currentParts["cpu-cooler"] = pickedPartList["cpu-cooler"];
   }
 
   if (pickedPartList.gpu != "") {
     document.getElementById(
       "picker-gpu"
-    ).innerText = `${pickedPartList.gpu.manufacturer} ${pickedPartList.gpu.chipset} ${pickedPartList.gpu.memory} ${pickedPartList.gpu.name}`;
+    ).innerHTML = `<img class="productImage" src="../../../images/${pickedPartList.gpu.img}.jpg">${pickedPartList.gpu.manufacturer} ${pickedPartList.gpu.chipset} ${pickedPartList.gpu.memory} ${pickedPartList.gpu.name}`;
     document.getElementById(
       "gpu-price"
     ).innerText = `$${pickedPartList.gpu.price}`;
+    currentParts.gpu = pickedPartList.gpu;
+  }
+  if (pickedPartList.gpu === "") {
+    document.getElementById(
+      "picker-gpu"
+    ).innerHTML = `+ Choose A Video Card`;
+    document.getElementById(
+      "gpu-price"
+    ).innerText = `$0.00`;
     currentParts.gpu = pickedPartList.gpu;
   }
 
   if (pickedPartList.motherboard != "") {
     document.getElementById(
       "picker-motherboard"
-    ).innerText = `${pickedPartList.motherboard.manufacturer} ${pickedPartList.motherboard.series} ${pickedPartList.motherboard.name} ${pickedPartList.motherboard.socket}`;
+    ).innerHTML = `<img class="productImage" src="../../../images/${pickedPartList.motherboard.img}.jpg">${pickedPartList.motherboard.manufacturer} ${pickedPartList.motherboard.series} ${pickedPartList.motherboard.name} ${pickedPartList.motherboard.socket}`;
     document.getElementById(
       "motherboard-price"
     ).innerText = `$${pickedPartList.motherboard.price}`;
+    currentParts.motherboard = pickedPartList.motherboard;
+  }
+  if (pickedPartList.motherboard === "") {
+    document.getElementById(
+      "picker-motherboard"
+    ).innerHTML = `+ Choose A Motherboard`;
+    document.getElementById(
+      "motherboard-price"
+    ).innerText = `$0.00`;
     currentParts.motherboard = pickedPartList.motherboard;
   }
 
   if (pickedPartList.ram != "") {
     document.getElementById(
       "picker-ram"
-    ).innerText = `${pickedPartList.ram.manufacturer} ${pickedPartList.ram.name} ${pickedPartList.ram["memory-config"]} ${pickedPartList.ram.type}-${pickedPartList.ram.speed}`;
+    ).innerHTML = `<img class="productImage" src="../../../images/${pickedPartList.ram.img}.jpg">${pickedPartList.ram.manufacturer} ${pickedPartList.ram.name} ${pickedPartList.ram["memory-config"]} ${pickedPartList.ram.type}-${pickedPartList.ram.speed}`;
     document.getElementById(
       "ram-price"
     ).innerText = `$${pickedPartList.ram.price}`;
+    currentParts.ram = pickedPartList.ram;
+  }
+  if (pickedPartList.ram === "") {
+    document.getElementById(
+      "picker-ram"
+    ).innerHTML = `+ Choose A Memory Kit`;
+    document.getElementById(
+      "ram-price"
+    ).innerText = `$0.00`;
     currentParts.ram = pickedPartList.ram;
   }
 
   if (pickedPartList.storage != "") {
     document.getElementById(
       "picker-storage"
-    ).innerText = `${pickedPartList.storage.manufacturer} ${pickedPartList.storage.name} ${pickedPartList.storage.size} ${pickedPartList.storage.type}`;
+    ).innerHTML = `<img class="productImage" src="../../../images/${pickedPartList.storage.img}.jpg">${pickedPartList.storage.manufacturer} ${pickedPartList.storage.name} ${pickedPartList.storage.size} ${pickedPartList.storage.type}`;
     document.getElementById(
       "storage-price"
     ).innerText = `$${pickedPartList.storage.price}`;
+    currentParts.storage = pickedPartList.storage;
+  }
+  if (pickedPartList.storage === "") {
+    document.getElementById(
+      "picker-storage"
+    ).innerHTML = `+ Choose A Storage Device`;
+    document.getElementById(
+      "storage-price"
+    ).innerText = `$0.00`;
     currentParts.storage = pickedPartList.storage;
   }
 
   if (pickedPartList.case != "") {
     document.getElementById(
       "picker-case"
-    ).innerText = `${pickedPartList.case.manufacturer} ${pickedPartList.case.name} ${pickedPartList.case.type}`;
+    ).innerHTML = `<img class="productImage" src="../../../images/${pickedPartList.case.img}.jpg">${pickedPartList.case.manufacturer} ${pickedPartList.case.name} ${pickedPartList.case.type}`;
     document.getElementById(
       "case-price"
     ).innerText = `$${pickedPartList.case.price}`;
+    currentParts.case = pickedPartList.case;
+  }
+  if (pickedPartList.case === "") {
+    document.getElementById(
+      "picker-case"
+    ).innerHTML = `+ Choose A Case`;
+    document.getElementById(
+      "case-price"
+    ).innerText = `$0.00`;
     currentParts.case = pickedPartList.case;
   }
 
   if (pickedPartList.psu != "") {
     document.getElementById(
       "picker-psu"
-    ).innerText = `${pickedPartList.psu.manufacturer} ${pickedPartList.psu.name} ${pickedPartList.psu.wattage}W ${pickedPartList.psu.rating}`;
+    ).innerHTML = `<img class="productImage" src="../../../images/${pickedPartList.psu.img}.jpg">${pickedPartList.psu.manufacturer} ${pickedPartList.psu.name} ${pickedPartList.psu.wattage}W ${pickedPartList.psu.rating}`;
     document.getElementById(
       "psu-price"
     ).innerText = `$${pickedPartList.psu.price}`;
+    currentParts.case = pickedPartList.psu;
+  }
+  if (pickedPartList.psu === "") {
+    document.getElementById(
+      "picker-psu"
+    ).innerHTML = `+ Choose A Power Supply`;
+    document.getElementById(
+      "psu-price"
+    ).innerText = `$0.00`;
     currentParts.case = pickedPartList.psu;
   }
 
@@ -372,28 +451,11 @@ saveListButton.addEventListener("click", () => {
   loadLists();
 });
 delLists.addEventListener("change", (e) => {
-  console.log("-----Deleted List-----");
-  console.log(e.target.value);
-  console.log("-----Deleted List-----");
   localStorage.removeItem(e.target.value);
-  while (savedLists.lastChild.id !== "select-placeholder") {
-    savedLists.removeChild(savedLists.lastChild);
-  }
-  while (delLists.lastChild.id !== "delete-placeholder") {
-    delLists.removeChild(delLists.lastChild);
-  }
-  document.getElementById("select-placeholder").selected = true;
-  document.getElementById("delete-placeholder").selected = true;
   loadLists();
 });
 clearListsButton.addEventListener("click", () => {
   localStorage.clear();
-  while (savedLists.lastChild.id !== "select-placeholder") {
-    savedLists.removeChild(savedLists.lastChild);
-  }
-  while (delLists.lastChild.id !== "delete-placeholder") {
-    delLists.removeChild(delLists.lastChild);
-  }
   loadLists();
 });
 loadLists();

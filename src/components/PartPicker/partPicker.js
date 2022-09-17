@@ -300,7 +300,7 @@ savedLists.addEventListener("change", (e) => {
   if (pickedPartList["cpu-cooler"] != "") {
     document.getElementById(
       "picker-cpu-cooler"
-    ).innerHTML = `<img class="productImage" src="../../../images/${pickedPartList["cpu-cooler"].img}.jpg">${pickedPartList["cpu-cooler"].manufacturer} ${pickedPartList["cpu-cooler"].name} ${pickedPartList["cpu-cooler"].name}`;
+    ).innerHTML = `<img class="productImage" src="../../../images/${pickedPartList["cpu-cooler"].img}.jpg">${pickedPartList["cpu-cooler"].manufacturer} ${pickedPartList["cpu-cooler"].name}`;
     document.getElementById(
       "cpu-cooler-price"
     ).innerText = `$${pickedPartList["cpu-cooler"].price}`;

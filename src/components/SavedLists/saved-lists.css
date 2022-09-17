@@ -125,6 +125,9 @@ body{
     text-shadow: 0 0 2px rgb(21, 21, 255), 0 0 1px white;
     color: cyan;
 }
+#manage-lists-wrapper{
+    display: flex;
+}
 .reciept-input{
     background-color: rgb(36, 69, 255);
     width: 100%;
@@ -133,6 +136,7 @@ body{
     border-radius: 7.5px;
     box-shadow: 0px 0px 5px white;
     padding: 1rem;
+    margin: 1rem;
     transition: all .5s;
     text-align: center;
     margin-bottom: .5rem;

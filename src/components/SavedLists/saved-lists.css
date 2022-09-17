@@ -120,10 +120,17 @@ body{
     padding: .5rem;
     margin: .5rem;
 }
+.partName{
+    margin: .5rem;
+}
 .partPrice{
+    padding: .5rem;
     font-weight: 700;
     text-shadow: 0 0 2px rgb(21, 21, 255), 0 0 1px white;
     color: cyan;
+}
+.listPrice .partPrice{
+    padding: 0.25rem;
 }
 #manage-lists-wrapper{
     display: flex;

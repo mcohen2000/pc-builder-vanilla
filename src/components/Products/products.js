@@ -84,8 +84,8 @@ function makeCard(data) {
       productTitle.innerText = `${data.products[i].manufacturer} ${data.products[i].name} ${data.products[i].type}`;
     }
     const productImage = document.createElement("img");
-    productImage.src = `../../../images/${data.products[i].img}.jpg`;
-    productImage.classList += "productImage"
+    productImage.src = `../../../assets/${data.products[i].img}.jpg`;
+    productImage.classList += "productImage";
     productWrapper.append(productTitle);
     productWrapper.append(productImage);
     productWrapper.append(productPrice);

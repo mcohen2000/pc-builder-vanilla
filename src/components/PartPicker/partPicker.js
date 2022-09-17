@@ -433,6 +433,7 @@ savedLists.addEventListener("change", (e) => {
   console.log("CURRENT PARTS AFTER LOAD", currentParts);
 
   updatePriceTotal();
+  loadLists();
 });
 
 saveListButton.addEventListener("click", () => {

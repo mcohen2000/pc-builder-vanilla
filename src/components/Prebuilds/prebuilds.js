@@ -16,53 +16,53 @@ function displayPrebuild(data) {
   const prebuiltPrice = document.createElement("p");
   prebuiltPrice.classList += "prebuildPrice";
   prebuiltPrice.innerHTML = `<span class="partLabel">Total Price:</span> <span class="partPrice">$${data["total-price"]}</span> + tax`;
-  const prebuiltCpu = document.createElement("p");
+  const prebuiltCpu = document.createElement("div");
   prebuiltCpu.classList += "prebuildPart";
-  prebuiltCpu.innerHTML = `<span class="partLabel">CPU:</span><span class="partName">${data.cpu.manufacturer} ${data.cpu.name} - </span><span class="partPrice">$${data.cpu.price}</span>`;
+  prebuiltCpu.innerHTML = `<p class="partLabel">CPU:</p><p class="partName">${data.cpu.manufacturer} ${data.cpu.name} - </p><p class="partPrice">$${data.cpu.price}</p>`;
   if (data.cpu.img) {
-    prebuiltCpu.innerHTML = `<span class="partLabel">CPU:</span> <img class="partImage" src="../../../assets/${data.cpu.img}.jpg"><span class="partName">${data.cpu.manufacturer} ${data.cpu.name} - </span><span class="partPrice">$${data.cpu.price}</span>`;
+    prebuiltCpu.innerHTML = `<p class="partLabel">CPU:</p> <img class="partImage" src="../../../assets/${data.cpu.img}.jpg"><p class="partName">${data.cpu.manufacturer} ${data.cpu.name} - </p><p class="partPrice">$${data.cpu.price}</p>`;
   }
-  const prebuiltCpuCooler = document.createElement("p");
+  const prebuiltCpuCooler = document.createElement("div");
   prebuiltCpuCooler.classList += "prebuildPart";
-  prebuiltCpuCooler.innerHTML = `<span class="partLabel">CPU Cooler:</span><span class="partName">${data["cpu-cooler"].manufacturer} ${data["cpu-cooler"].name} - </span><span class="partPrice">$${data["cpu-cooler"].price}</span>`;
+  prebuiltCpuCooler.innerHTML = `<p class="partLabel">CPU Cooler:</p><p class="partName">${data["cpu-cooler"].manufacturer} ${data["cpu-cooler"].name} - </p><p class="partPrice">$${data["cpu-cooler"].price}</p>`;
   if (data["cpu-cooler"].img) {
-    prebuiltCpuCooler.innerHTML = `<span class="partLabel">CPU Cooler:</span> <img class="partImage" src="../../../assets/${data["cpu-cooler"].img}.jpg"><span class="partName">${data["cpu-cooler"].manufacturer} ${data["cpu-cooler"].name} - </span><span class="partPrice">$${data["cpu-cooler"].price}</span>`;
+    prebuiltCpuCooler.innerHTML = `<p class="partLabel">CPU Cooler:</p> <img class="partImage" src="../../../assets/${data["cpu-cooler"].img}.jpg"><p class="partName">${data["cpu-cooler"].manufacturer} ${data["cpu-cooler"].name} - </p><p class="partPrice">$${data["cpu-cooler"].price}</p>`;
   }
-  const prebuiltMotherboard = document.createElement("p");
+  const prebuiltMotherboard = document.createElement("div");
   prebuiltMotherboard.classList += "prebuildPart";
-  prebuiltMotherboard.innerHTML = `<span class="partLabel">Motherboard:</span><span class="partName">${data.motherboard.manufacturer} ${data.motherboard.series} ${data.motherboard.name} ${data.motherboard.socket} - </span><span class="partPrice">$${data.motherboard.price}</span>`;
+  prebuiltMotherboard.innerHTML = `<p class="partLabel">Motherboard:</p><p class="partName">${data.motherboard.manufacturer} ${data.motherboard.series} ${data.motherboard.name} ${data.motherboard.socket} - </p><p class="partPrice">$${data.motherboard.price}</p>`;
   if (data.motherboard.img) {
-    prebuiltMotherboard.innerHTML = `<span class="partLabel">Motherboard:</span> <img class="partImage" src="../../../assets/${data.motherboard.img}.jpg"><span class="partName">${data.motherboard.manufacturer} ${data.motherboard.series} ${data.motherboard.name} ${data.motherboard.socket} - </span><span class="partPrice">$${data.motherboard.price}</span>`;
+    prebuiltMotherboard.innerHTML = `<p class="partLabel">Motherboard:</p> <img class="partImage" src="../../../assets/${data.motherboard.img}.jpg"><p class="partName">${data.motherboard.manufacturer} ${data.motherboard.series} ${data.motherboard.name} ${data.motherboard.socket} - </p><p class="partPrice">$${data.motherboard.price}</p>`;
   }
-  const prebuiltGpu = document.createElement("p");
+  const prebuiltGpu = document.createElement("div");
   prebuiltGpu.classList += "prebuildPart";
-  prebuiltGpu.innerHTML = `<span class="partLabel">Video Card:</span><span class="partName">${data.gpu.manufacturer} ${data.gpu.chipset} ${data.gpu.memory} ${data.gpu.name} - </span><span class="partPrice">$${data.gpu.price}</span>`;
+  prebuiltGpu.innerHTML = `<p class="partLabel">Video Card:</p><p class="partName">${data.gpu.manufacturer} ${data.gpu.chipset} ${data.gpu.memory} ${data.gpu.name} - </p><p class="partPrice">$${data.gpu.price}</p>`;
   if (data.gpu.img) {
-    prebuiltGpu.innerHTML = `<span class="partLabel">Video Card:</span><img class="partImage" src="../../../assets/${data.gpu.img}.jpg"><span class="partName">${data.gpu.manufacturer} ${data.gpu.chipset} ${data.gpu.memory} ${data.gpu.name} - </span><span class="partPrice">$${data.gpu.price}</span>`;
+    prebuiltGpu.innerHTML = `<p class="partLabel">Video Card:</p><img class="partImage" src="../../../assets/${data.gpu.img}.jpg"><p class="partName">${data.gpu.manufacturer} ${data.gpu.chipset} ${data.gpu.memory} ${data.gpu.name} - </p><p class="partPrice">$${data.gpu.price}</p>`;
   }
-  const prebuiltRam = document.createElement("p");
+  const prebuiltRam = document.createElement("div");
   prebuiltRam.classList += "prebuildPart";
-  prebuiltRam.innerHTML = `<span class="partLabel">Memory:</span><span class="partName">${data.ram.manufacturer} ${data.ram.name} ${data.ram["memory-config"]} ${data.ram.type}-${data.ram.speed} - </span><span class="partPrice">$${data.ram.price}</span>`;
+  prebuiltRam.innerHTML = `<p class="partLabel">Memory:</p><p class="partName">${data.ram.manufacturer} ${data.ram.name} ${data.ram["memory-config"]} ${data.ram.type}-${data.ram.speed} - </p><p class="partPrice">$${data.ram.price}</p>`;
   if (data.ram.img) {
-    prebuiltRam.innerHTML = `<span class="partLabel">Memory:</span><img class="partImage" src="../../../assets/${data.ram.img}.jpg"><span class="partName">${data.ram.manufacturer} ${data.ram.name} ${data.ram["memory-config"]} ${data.ram.type}-${data.ram.speed} - </span><span class="partPrice">$${data.ram.price}</span>`;
+    prebuiltRam.innerHTML = `<p class="partLabel">Memory:</p><img class="partImage" src="../../../assets/${data.ram.img}.jpg"><p class="partName">${data.ram.manufacturer} ${data.ram.name} ${data.ram["memory-config"]} ${data.ram.type}-${data.ram.speed} - </p><p class="partPrice">$${data.ram.price}</p>`;
   }
-  const prebuiltStorage = document.createElement("p");
+  const prebuiltStorage = document.createElement("div");
   prebuiltStorage.classList += "prebuildPart";
-  prebuiltStorage.innerHTML = `<span class="partLabel">Storage:</span><span class="partName">${data.storage.manufacturer} ${data.storage.name} ${data.storage.size} ${data.storage.type} - </span><span class="partPrice">$${data.storage.price}</span>`;
+  prebuiltStorage.innerHTML = `<p class="partLabel">Storage:</p><p class="partName">${data.storage.manufacturer} ${data.storage.name} ${data.storage.size} ${data.storage.type} - </p><p class="partPrice">$${data.storage.price}</p>`;
   if (data.storage.img) {
-    prebuiltStorage.innerHTML = `<span class="partLabel">Storage:</span><img class="partImage" src="../../../assets/${data.storage.img}.jpg"><span class="partName">${data.storage.manufacturer} ${data.storage.name} ${data.storage.size} ${data.storage.type} - </span><span class="partPrice">$${data.storage.price}</span>`;
+    prebuiltStorage.innerHTML = `<p class="partLabel">Storage:</p><img class="partImage" src="../../../assets/${data.storage.img}.jpg"><p class="partName">${data.storage.manufacturer} ${data.storage.name} ${data.storage.size} ${data.storage.type} - </p><p class="partPrice">$${data.storage.price}</p>`;
   }
-  const prebuiltPsu = document.createElement("p");
+  const prebuiltPsu = document.createElement("div");
   prebuiltPsu.classList += "prebuildPart";
-  prebuiltPsu.innerHTML = `<span class="partLabel">Power Supply:</span><span class="partName">${data.psu.manufacturer} ${data.psu.name} ${data.psu.wattage}W ${data.psu.rating} - </span><span class="partPrice">$${data.psu.price}</span>`;
+  prebuiltPsu.innerHTML = `<p class="partLabel">Power Supply:</p><p class="partName">${data.psu.manufacturer} ${data.psu.name} ${data.psu.wattage}W ${data.psu.rating} - </p><p class="partPrice">$${data.psu.price}</p>`;
   if (data.psu.img) {
-    prebuiltPsu.innerHTML = `<span class="partLabel">Power Supply:</span><img class="partImage" src="../../../assets/${data.psu.img}.jpg"><span class="partName">${data.psu.manufacturer} ${data.psu.name} ${data.psu.wattage}W ${data.psu.rating} - </span><span class="partPrice">$${data.psu.price}</span>`;
+    prebuiltPsu.innerHTML = `<p class="partLabel">Power Supply:</p><img class="partImage" src="../../../assets/${data.psu.img}.jpg"><p class="partName">${data.psu.manufacturer} ${data.psu.name} ${data.psu.wattage}W ${data.psu.rating} - </p><p class="partPrice">$${data.psu.price}</p>`;
   }
-  const prebuiltCase = document.createElement("p");
+  const prebuiltCase = document.createElement("div");
   prebuiltCase.classList += "prebuildPart";
-  prebuiltCase.innerHTML = `<span class="partLabel">Case:</span><span class="partName">${data.case.manufacturer} ${data.case.name} ${data.case.type} - </span><span class="partPrice">$${data.case.price}</span>`;
+  prebuiltCase.innerHTML = `<p class="partLabel">Case:</p><p class="partName">${data.case.manufacturer} ${data.case.name} ${data.case.type} - </p><p class="partPrice">$${data.case.price}</p>`;
   if (data.case.img) {
-    prebuiltCase.innerHTML = `<span class="partLabel">Case:</span><img class="partImage" src="../../../assets/${data.case.img}.jpg"><span class="partName">${data.case.manufacturer} ${data.case.name} ${data.case.type} - </span><span class="partPrice">$${data.case.price}</span>`;
+    prebuiltCase.innerHTML = `<p class="partLabel">Case:</p><img class="partImage" src="../../../assets/${data.case.img}.jpg"><p class="partName">${data.case.manufacturer} ${data.case.name} ${data.case.type} - </p><p class="partPrice">$${data.case.price}</p>`;
   }
 
   prebuiltWrapper.append(prebuiltTitle);

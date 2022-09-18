@@ -40,77 +40,77 @@ function loadLists() {
       if (data["total-price"] === "") {
         listPrice.innerHTML = `<span class="partLabel">Total Price:</span> <span class="partPrice">$0.00</span> + tax`;
       }
-      const listCpu = document.createElement("p");
+      const listCpu = document.createElement("div");
       listCpu.classList += "listPart";
-      listCpu.innerHTML = `<span class="partLabel">CPU:</span><span class="partName">${data.cpu.manufacturer} ${data.cpu.name} - </span><span class="partPrice">$${data.cpu.price}</span>`;
+      listCpu.innerHTML = `<p class="partLabel">CPU:</p><p class="partName">${data.cpu.manufacturer} ${data.cpu.name} - </p><p class="partPrice">$${data.cpu.price}</p>`;
       if (data.cpu.img) {
-        listCpu.innerHTML = `<span class="partLabel">CPU:</span><img class="partImage" src="../../../assets/${data.cpu.img}.jpg"><span class="partName">${data.cpu.manufacturer} ${data.cpu.name} - </span><span class="partPrice">$${data.cpu.price}</span>`;
+        listCpu.innerHTML = `<p class="partLabel">CPU:</p><img class="partImage" src="../../../assets/${data.cpu.img}.jpg"><p class="partName">${data.cpu.manufacturer} ${data.cpu.name} - </p><p class="partPrice">$${data.cpu.price}</p>`;
       }
       if (data.cpu === "") {
-        listCpu.innerHTML = `<span class="partLabel">CPU:</span><span class="partName">Empty - </span><span class="partPrice">$0.00</span>`;
+        listCpu.innerHTML = `<p class="partLabel">CPU:</p><p class="partName">Empty - </p><p class="partPrice">$0.00</p>`;
       }
-      const listCpuCooler = document.createElement("p");
+      const listCpuCooler = document.createElement("div");
       listCpuCooler.classList += "listPart";
-      listCpuCooler.innerHTML = `<span class="partLabel">CPU Cooler:</span><span class="partName">${data["cpu-cooler"].manufacturer} ${data["cpu-cooler"].name} - </span><span class="partPrice">$${data["cpu-cooler"].price}</span>`;
+      listCpuCooler.innerHTML = `<p class="partLabel">CPU Cooler:</p><p class="partName">${data["cpu-cooler"].manufacturer} ${data["cpu-cooler"].name} - </p><p class="partPrice">$${data["cpu-cooler"].price}</p>`;
       if (data["cpu-cooler"].img) {
-        listCpuCooler.innerHTML = `<span class="partLabel">CPU Cooler:</span><img class="partImage" src="../../../assets/${data["cpu-cooler"].img}.jpg"><span class="partName">${data["cpu-cooler"].manufacturer} ${data["cpu-cooler"].name} - </span><span class="partPrice">$${data["cpu-cooler"].price}</span>`;
+        listCpuCooler.innerHTML = `<p class="partLabel">CPU Cooler:</p><img class="partImage" src="../../../assets/${data["cpu-cooler"].img}.jpg"><p class="partName">${data["cpu-cooler"].manufacturer} ${data["cpu-cooler"].name} - </p><p class="partPrice">$${data["cpu-cooler"].price}</p>`;
       }
       if (data["cpu-cooler"] === "") {
-        listCpuCooler.innerHTML = `<span class="partLabel">CPU Cooler:</span><span class="partName">Empty - </span><span class="partPrice">$0.00</span>`;
+        listCpuCooler.innerHTML = `<p class="partLabel">CPU Cooler:</p><p class="partName">Empty - </p><p class="partPrice">$0.00</p>`;
       }
-      const listMotherboard = document.createElement("p");
+      const listMotherboard = document.createElement("div");
       listMotherboard.classList += "listPart";
-      listMotherboard.innerHTML = `<span class="partLabel">Motherboard:</span><span class="partName">${data.motherboard.manufacturer} ${data.motherboard.series} ${data.motherboard.name} ${data.motherboard.socket} - </span><span class="partPrice">$${data.motherboard.price}</span>`;
+      listMotherboard.innerHTML = `<p class="partLabel">Motherboard:</p><p class="partName">${data.motherboard.manufacturer} ${data.motherboard.series} ${data.motherboard.name} ${data.motherboard.socket} - </p><p class="partPrice">$${data.motherboard.price}</p>`;
       if (data.motherboard.img) {
-        listMotherboard.innerHTML = `<span class="partLabel">Motherboard:</span><img class="partImage" src="../../../assets/${data.motherboard.img}.jpg"><span class="partName">${data.motherboard.manufacturer} ${data.motherboard.series} ${data.motherboard.name} ${data.motherboard.socket} - </span><span class="partPrice">$${data.motherboard.price}</span>`;
+        listMotherboard.innerHTML = `<p class="partLabel">Motherboard:</p><img class="partImage" src="../../../assets/${data.motherboard.img}.jpg"><p class="partName">${data.motherboard.manufacturer} ${data.motherboard.series} ${data.motherboard.name} ${data.motherboard.socket} - </p><p class="partPrice">$${data.motherboard.price}</p>`;
       }
       if (data.motherboard === "") {
-        listMotherboard.innerHTML = `<span class="partLabel">Motherboard:</span><span class="partName">Empty - </span><span class="partPrice">$0.00</span>`;
+        listMotherboard.innerHTML = `<p class="partLabel">Motherboard:</p><p class="partName">Empty - </p><p class="partPrice">$0.00</p>`;
       }
-      const listGpu = document.createElement("p");
+      const listGpu = document.createElement("div");
       listGpu.classList += "listPart";
-      listGpu.innerHTML = `<span class="partLabel">Video Card:</span><span class="partName">${data.gpu.manufacturer} ${data.gpu.chipset} ${data.gpu.memory} ${data.gpu.name} - </span><span class="partPrice">$${data.gpu.price}</span>`;
+      listGpu.innerHTML = `<p class="partLabel">Video Card:</p><p class="partName">${data.gpu.manufacturer} ${data.gpu.chipset} ${data.gpu.memory} ${data.gpu.name} - </p><p class="partPrice">$${data.gpu.price}</p>`;
       if (data.gpu.img) {
-        listGpu.innerHTML = `<span class="partLabel">Video Card:</span><img class="partImage" src="../../../assets/${data.gpu.img}.jpg"><span class="partName">${data.gpu.manufacturer} ${data.gpu.chipset} ${data.gpu.memory} ${data.gpu.name} - </span><span class="partPrice">$${data.gpu.price}</span>`;
+        listGpu.innerHTML = `<p class="partLabel">Video Card:</p><img class="partImage" src="../../../assets/${data.gpu.img}.jpg"><p class="partName">${data.gpu.manufacturer} ${data.gpu.chipset} ${data.gpu.memory} ${data.gpu.name} - </p><p class="partPrice">$${data.gpu.price}</p>`;
       }
       if (data.gpu === "") {
-        listGpu.innerHTML = `<span class="partLabel">Video Card:</span><span class="partName">Empty - </span><span class="partPrice">$0.00</span>`;
+        listGpu.innerHTML = `<p class="partLabel">Video Card:</p><p class="partName">Empty - </p><p class="partPrice">$0.00</p>`;
       }
-      const listRam = document.createElement("p");
+      const listRam = document.createElement("div");
       listRam.classList += "listPart";
-      listRam.innerHTML = `<span class="partLabel">Memory:</span><span class="partName">${data.ram.manufacturer} ${data.ram.name} ${data.ram["memory-config"]} ${data.ram.type}-${data.ram.speed} - </span><span class="partPrice">$${data.ram.price}</span>`;
+      listRam.innerHTML = `<p class="partLabel">Memory:</p><p class="partName">${data.ram.manufacturer} ${data.ram.name} ${data.ram["memory-config"]} ${data.ram.type}-${data.ram.speed} - </p><p class="partPrice">$${data.ram.price}</p>`;
       if (data.ram.img) {
-        listRam.innerHTML = `<span class="partLabel">Memory:</span><img class="partImage" src="../../../assets/${data.ram.img}.jpg"><span class="partName">${data.ram.manufacturer} ${data.ram.name} ${data.ram["memory-config"]} ${data.ram.type}-${data.ram.speed} - </span><span class="partPrice">$${data.ram.price}</span>`;
+        listRam.innerHTML = `<p class="partLabel">Memory:</p><img class="partImage" src="../../../assets/${data.ram.img}.jpg"><p class="partName">${data.ram.manufacturer} ${data.ram.name} ${data.ram["memory-config"]} ${data.ram.type}-${data.ram.speed} - </p><p class="partPrice">$${data.ram.price}</p>`;
       }
       if (data.ram === "") {
-        listRam.innerHTML = `<span class="partLabel">Memory:</span><span class="partName">Empty - </span><span class="partPrice">$0.00</span>`;
+        listRam.innerHTML = `<p class="partLabel">Memory:</p><p class="partName">Empty - </p><p class="partPrice">$0.00</p>`;
       }
-      const listStorage = document.createElement("p");
+      const listStorage = document.createElement("div");
       listStorage.classList += "listPart";
-      listStorage.innerHTML = `<span class="partLabel">Storage:</span><span class="partName">${data.storage.manufacturer} ${data.storage.name} ${data.storage.size} ${data.storage.type} - </span><span class="partPrice">$${data.storage.price}</span>`;
+      listStorage.innerHTML = `<p class="partLabel">Storage:</p><p class="partName">${data.storage.manufacturer} ${data.storage.name} ${data.storage.size} ${data.storage.type} - </p><p class="partPrice">$${data.storage.price}</p>`;
       if (data.storage.img) {
-        listStorage.innerHTML = `<span class="partLabel">Storage:</span><img class="partImage" src="../../../assets/${data.storage.img}.jpg"><span class="partName">${data.storage.manufacturer} ${data.storage.name} ${data.storage.size} ${data.storage.type} - </span><span class="partPrice">$${data.storage.price}</span>`;
+        listStorage.innerHTML = `<p class="partLabel">Storage:</p><img class="partImage" src="../../../assets/${data.storage.img}.jpg"><p class="partName">${data.storage.manufacturer} ${data.storage.name} ${data.storage.size} ${data.storage.type} - </p><p class="partPrice">$${data.storage.price}</p>`;
       }
       if (data.storage === "") {
-        listStorage.innerHTML = `<span class="partLabel">Storage:</span><span class="partName">Empty - </span><span class="partPrice">$0.00</span>`;
+        listStorage.innerHTML = `<p class="partLabel">Storage:</p><p class="partName">Empty - </p><p class="partPrice">$0.00</p>`;
       }
-      const listPsu = document.createElement("p");
+      const listPsu = document.createElement("div");
       listPsu.classList += "listPart";
-      listPsu.innerHTML = `<span class="partLabel">Power Supply:</span><span class="partName">${data.psu.manufacturer} ${data.psu.name} ${data.psu.wattage}W ${data.psu.rating} - </span><span class="partPrice">$${data.psu.price}</span>`;
+      listPsu.innerHTML = `<p class="partLabel">Power Supply:</p><p class="partName">${data.psu.manufacturer} ${data.psu.name} ${data.psu.wattage}W ${data.psu.rating} - </p><p class="partPrice">$${data.psu.price}</p>`;
       if (data.psu.img) {
-        listPsu.innerHTML = `<span class="partLabel">Power Supply:</span> <img class="partImage" src="../../../assets/${data.psu.img}.jpg"><span class="partName">${data.psu.manufacturer} ${data.psu.name} ${data.psu.wattage}W ${data.psu.rating} - </span><span class="partPrice">$${data.psu.price}</span>`;
+        listPsu.innerHTML = `<p class="partLabel">Power Supply:</p> <img class="partImage" src="../../../assets/${data.psu.img}.jpg"><p class="partName">${data.psu.manufacturer} ${data.psu.name} ${data.psu.wattage}W ${data.psu.rating} - </p><p class="partPrice">$${data.psu.price}</p>`;
       }
       if (data.psu === "") {
-        listPsu.innerHTML = `<span class="partLabel">Power Supply:</span><span class="partName">Empty - </span><span class="partPrice">$0.00</span>`;
+        listPsu.innerHTML = `<p class="partLabel">Power Supply:</p><p class="partName">Empty - </p><p class="partPrice">$0.00</p>`;
       }
-      const listCase = document.createElement("p");
+      const listCase = document.createElement("div");
       listCase.classList += "listPart";
-      listCase.innerHTML = `<span class="partLabel">Case:</span><span class="partName">${data.case.manufacturer} ${data.case.name} ${data.case.type} - </span><span class="partPrice">$${data.case.price}</span>`;
+      listCase.innerHTML = `<p class="partLabel">Case:</p><p class="partName">${data.case.manufacturer} ${data.case.name} ${data.case.type} - </p><p class="partPrice">$${data.case.price}</p>`;
       if (data.case.img) {
-        listCase.innerHTML = `<span class="partLabel">Case:</span><img class="partImage" src="../../../assets/${data.case.img}.jpg"><span class="partName">${data.case.manufacturer} ${data.case.name} ${data.case.type} - </span><span class="partPrice">$${data.case.price}</span>`;
+        listCase.innerHTML = `<p class="partLabel">Case:</p><img class="partImage" src="../../../assets/${data.case.img}.jpg"><p class="partName">${data.case.manufacturer} ${data.case.name} ${data.case.type} - </p><p class="partPrice">$${data.case.price}</p>`;
       }
       if (data.case === "") {
-        listCase.innerHTML = `<span class="partLabel">Case:</span><span class="partName">Empty - </span><span class="partPrice">$0.00</span>`;
+        listCase.innerHTML = `<p class="partLabel">Case:</p><p class="partName">Empty - </p><p class="partPrice">$0.00</p>`;
       }
       newCard.append(listHeader);
       newCard.append(listCpu);
